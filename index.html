@@ -50,7 +50,7 @@
 		</script>
 		<script type="module">
 			
-			import { getArray, getRandomVideo } from "https://videos.hubchicken.tk/video-array.js"
+			import { getArray, getRandomVideo } from "https://hubchicken.tk/video-array.js"
 			/*
 				MASSIVE PROBLEM:
 				- Videos do not work on mobile
@@ -70,7 +70,7 @@
 			console.log(automodebool)
 			let randomItem = null;
 			function formatText(text) {
-				let formatted = text.split("videos.hubchicken.tk/");
+				let formatted = text.split("https://videos.hubchicken.tk/");
 				if (formatted[1])
 					// fuk u if you have a file extension twice
 					return formatted[1].replace(".mp4", "").replace(".webm", "").replace(".mov", "").replace(".3gpp", "").replaceAll("_", " ").replaceAll("-", " "); 
