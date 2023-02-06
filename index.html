@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="HUBCHICKEN.png">
+		<meta property="og:site_name" content="Hubchicken" />
+		<meta property="og:title" content="Random Videos" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://hubchicken.tk" />
+		<meta property="og:image" content="https://hubchicken.tk/HUBCHICKEN.png" />
+		<meta property="og:description" content="Everytime you click the button, a new video appears!" />
+		<meta name="theme-color" content="#0D69AB">
+		<title>Random Videos</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="topbar">
+			<img id="hubchickenicon" onclick="new Audio('hubchicken.mp3').play()"
+				style="cursor: pointer;" src="HUBCHICKEN.png" alt="Hubchicken"
+				height="35" />
+			<article>
+				<p>Hubchicken.tk<br><span><em>Welcome to hell.</em></span></p>
+			</article>
+		</div>
+
+		<div class="content-container">
+			<a style="text-align: center;" id="video-link" download></a>
+			<video id="video">
+				<source id="video-source" src="">
+			</video>
+			<input type="button" value="Click this to load a random video"
+				id="video-button">
+			<p><input type="checkbox" id="automode"> Automatic Mode <b id="comment"> / this will play a new video once the video finishes</b></p>
+		</div>
+
+		<div class="content-container">
+			<p>Links:</p>
+			<hr>
+			<a href="contact.html">Contacts</a>
+			<a href="videos/index.html">List of Videos</a></h1>
+		</div>
+		<script>
+			const d = new Date();
+			var month = d.getMonth();
+			if (month == 11) {
+			document.getElementById("hubchickenicon").src="assets/HUBCHICKEN_festive.png"
+			}
+		</script>
+		<script type="module">
+			
+			import { getArray, getRandomVideo } from "./video-array.js"
+			/*
+				MASSIVE PROBLEM:
+				- Videos do not work on mobile
+				- I do not know why
+				- If anyone can research this, please fix
+				
+				Solution: Mobile sucks dick lmao
+				NOTE: IF YOU WANT TO ADD VIDEOS, GO TO video-array.js
+			*/
+
+			var video = document.getElementById("video");
+			var videoSource = document.getElementById("video-source");
+			var videoButton = document.getElementById("video-button");
+			var videoLink = document.getElementById("video-link");
+			var automode = document.getElementById("automode")
+			var automodebool = automode.checked
+			console.log(automodebool)
+			let randomItem = null;
+			function formatText(text) {
+				let formatted = text.split("videos/");
+				if (formatted[1])
+					// fuk u if you have a file extension twice
+					return formatted[1].replace(".mp4", "").replace(".webm", "").replace(".mov", "").replace(".3gpp", "").replaceAll("_", " ").replaceAll("-", " "); 
+				else
+					return text;
+			}
+			function loadVideo() {
+				videoSource.src = randomItem;
+				videoSource.type = "video/ogg";
+				video.autoplay = true;
+				video.load();
+			}
+			function addVideo() {
+				randomItem = getRandomVideo();
+				videoLink.textContent = formatText(randomItem);
+				videoLink.href = randomItem;
+				loadVideo();
+			}
+			function automodehandler(){
+				if (automodebool == true){
+					addVideo()
+				}
+				else{
+					loadVideo()
+				}
+			}
+			function changeboolAM(){
+				automodebool = automode.checked
+				console.log(automodebool)
+			}
+			automode.addEventListener("click",changeboolAM)
+			video.addEventListener("ended", automodehandler, false);
+			videoButton.addEventListener("click", addVideo);
+			/** @type {<Type>(arr: Type[]) => Type} */
+			const random = arr => arr[Math.floor(Math.random() * arr.length)]
+			function particles({
+				amount = 50,
+				delay = 10,
+				duration = 1000,
+				photos = [
+					'moller',
+					'molly_hq',
+					'seconds before bragle',
+					'she wants your food',
+					'sitting on top of headrest',
+					'zzz',
+					'cool sleep',
+					'molge',
+					'begging',
+					'standing'
+				].map((a) => `./molly/${a}.png`),
+				pos: [x, y] = ['0%', '100%']
+			}) {
+				for (const i of Array(amount).keys()) {
+					const img = new Image(150, 150)
+					img.src = random(photos)
+					img.style = `
+					position: fixed;
+					transform-origin: center center;
+					object-fit: contain;
+					`
+					img.ariaHidden = 'true'
+					document.body.appendChild(img)
+					img.animate([{ opacity: 0 }, { opacity: 1 }], {
+						delay: i * delay,
+						duration: 100,
+						fill: 'both'
+					})
+					img
+						.animate(
+							[
+								{
+									top: Math.random() * 100 + '%',
+									left: Math.random() * 100 + '%'
+								},
+								{ top: y, left: x, width: 0, height: 0 }
+							],
+							{
+								delay: i * delay,
+								easing: 'cubic-bezier(.95, .05, .795, .035)',
+								duration: duration,
+								fill: 'both'
+							}
+						)
+						.addEventListener('finish', () => {
+							img.remove()
+						})
+				}
+			}
+
+
+			/** @param {string} text @param {HTMLElement} [paragraph] */
+			function say(text, paragraph) {
+				const voice = random(speechSynthesis.getVoices().filter(voice => voice.lang.startsWith('en-')))
+				let handle
+				return new Promise((resolve) => {
+					function check() {
+						if (speechSynthesis.speaking) {
+							handle = requestAnimationFrame(check)
+						} else {
+							cancelAnimationFrame(handle)
+							resolve()
+						}
+					}
+					const utter = new SpeechSynthesisUtterance(text)
+					utter.voice = voice
+					if (paragraph) {
+						paragraph.innerText = ""
+					}
+					utter.addEventListener('boundary', function (event) {
+						if (paragraph) {
+							paragraph.innerText = text.substring(0, event.charIndex + event.charLength)
+						}
+					});
+					speechSynthesis.speak(utter)
+					check()
+				})
+			}
+
+			const moller = [
+				'moller',
+				'molly_hq',
+				'seconds before bragle',
+				'she wants your food',
+				'sitting on top of headrest',
+				'zzz',
+				'cool sleep',
+				'molge',
+				'begging',
+				'standing'
+			].map((a) => `./molly/${a}.png`)
+			// Hide context menu
+			document.body.addEventListener('contextmenu', event => {
+				event.preventDefault()
+				if (event.target?.id !== 'video-link') {
+					new Audio('https://www.myinstants.com/media/sounds/vine-boom.mp3').play()
+
+					particles({
+						pos: [event.pageX + 'px', event.pageY + 'px'],
+						duration: 300,
+						delay: 1
+					})
+				} else {
+					navigator.clipboard.writeText(videoLink.href)
+					say(`Copied to clipboard.`)
+				}
+			})
+		</script>
+	</body>
+
+</html>
