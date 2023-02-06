@@ -15,6 +15,8 @@ var videoArray = [
 	//'https://cdn.discordapp.com/attachments/799419671161733210/904835057489948702/My_intro.mp4', //THESE DONT WORK!!!!!!!
 	//'https://cdn.discordapp.com/attachments/881656384352038963/888939092237238313/video0.mp4',
 	//'https://cdn.discordapp.com/attachments/883902480205905961/889500697538732092/WHA_DA.mp4',
+	'https://videos.hubchicken.tk/92.mp4',
+	'https://videos.hubchicken.tk/96.mp4',
 	'https://videos.hubchicken.tk/frieza.mp4',
 	'https://videos.hubchicken.tk/mohg.mp4',
 	//'https://videos.hubchicken.tk/onepieced.mp4', //omitted. what the hell is wrong with you
