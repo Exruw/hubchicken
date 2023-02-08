@@ -3470,7 +3470,79 @@ var videoArray = [
 	'https://videos.hubchicken.tk/zakro_the_clones.mp4',
 	'https://videos.hubchicken.tk/zoltyn.mp4',
 	'https://videos.hubchicken.tk/ztym.mp4',
-	'https://videos.hubchicken.tk/zyne.mp4'
+	'https://videos.hubchicken.tk/zyne.mp4',
+	/*
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNWMKolokWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXXWMMMMMMMMMMMMWNXKkxXNNMMMMMMMMMWXXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMN00KXNNNNNNNXKKOkxoc:;,cOWMMMMMMMMMMWO:,:kNMMMMMMMMMWOc,;:coxkOKKXNNNNNNNXK00NMMMMMMMMMMM
+	MMMMMMMMMMKc..',;,,,;;;,,,'',,;clc;'c0WMMMMWNKKKkc,',xXNWMMMMW0c,;llc;,,'',,,;;,,,,;,'..cKMMMMMMMMMM
+	MMMMMMMMMMNl.'::::::cclloooddddolloc''xKkolcc:;;;'..';:ccldOKx''ldllodddooolccc:;;;::;'.lXMMMMMMMMMM
+	MMMMMMMMMMMNx;';looooooddddddddol;;c,..,;:ldxxxoclodxdoooc;;,..;c;;lodoooooooolllllc;',xNMMMMMMMMMMM
+	MMMMMMMMMMMMNx..':looooodddddoodd:..,:ldxxxxkxxkxxkxxxoloxxdoc,,..:oooooooooollllc;'..xNMMMMMMMMMMMM
+	MMMMMMMMMWXx:'';::cloooooddddoc:;,.,lxxxxdxxxxxxxxxxxxxl:lddddo:'.,::clooooolllll::;,'':xXWMMMMMMMMM
+	MMMMMMMNOl,',:cllllllooooooool;..':odxxxocoxxxxxxxxxdddo::ddddooc:,.,:llollllllllccccc:,.,lONMMMMMMM
+	X00K0xl;'',:cccccllllllloolc:'..;odddddd:,lxddddddddddddc';looooool:,',:clllllllcccccc:::,..;lx0KKXN
+	;..'...,::::ccccccclllllll:;..':looooolc,.;ooooooooollool..,cloollllc,',;:cllllccccccc::::;;,...'..;
+	; .',;;:::::::::ccccclllc:,.',;clllll::lo,'cccoooooolclol'.'::clllllc;,',,;:ccccccc:::::::;;;;,'.. ;
+	K:..''',,,,;;;;:ccccccc:;,.',;clllc:;:ccc;.,;,cllllllc:cc'..,::::llllc,''',;:cccccc::;;;,,''''''..:K
+	MNd,.';:::::::::::cc:;;,,..',cll:;,'........'',clllllc,;:,.''';:;;;ccc;'..',,;ccccc::::::;;;;,..,dNM
+	MMMXd;'.',;:::::::;;,,,,'...,;;'...............':ccccc;',,.';,'.''..,;;'...,,,;:::::::::;;,'..;dXWMM
+	MMMMMN0xl:'.,;;,,,''''',....'...  ...............,;:cc:'... .........',,...',,,,;;:::::,.':lx0NMMMMM
+	MMMMMMMMM0;.',''''''''',. ...',.  ..............,,',,;;'.......'';,.',''. .','''',,,,,,'.;0MMMMMMMMM
+	MMMMMMMMXc..'''''''''''''..,;;;..'........'',,,cxkxo;,,'..,:,..',l:.,::;,..','''''''''''..cXMMMMMMMM
+	MMMMMMMWd..'....''''''''..,:::;.;dolclcc:clloxkkxOKKOo:,.'x0x;',:xo.;ccc:'.'''''''''.......dWMMMMMMM
+	MMMMMMMK, ..',. .'''.'''.'::::;.c0K00OOOO00KXXKOoxKKXK0kokXXKx;';do.,c:::;..'''.'''. .,'.. ,KMMMMMMM
+	MMMMMMMNl.;dKX: .'...'...,;::::.;OXXXXXXXXXXXXxodxOOOdx0XXXXXKd,'ol',:::;;...''...'. :XKd;.lNMMMMMMM
+	MMMMMMMMNKNMMMO,..........';:::',OXXXXK0XXXXXKOl;;;;;:dKXXXXXXO:,oo,;:::,'..........'OMMMNKNMMMMMMMM
+	MMMMMMMMMMMXkdl,  ...,,....;:::,,kXXXXOkKKKXXXXx:;,,,;kXXXXXXXKl,ol';:::,....,'...  ,ox0WMMMMMMMMMMM
+	MMMMMMMMMMKc....',,;;:;'...;:::;'oXXXKOO0OOKKXXKOdolcdKXXXXXXXXd,c:';:;;'....;;;;,''....dWMMMMMMMMMM
+	MMMMMMMMMMWOc'.',;;;;;,,'..,::::'c0K0xlodkOOKXXXXXXKKXXXXXXXXXXd;:,.''''...''',;;;;,'.,oKWMMMMMMMMMM
+	MMMMMMMMMMMMWk,..;;,,''''..';:::''lxd;',;:lkKXXXXXXXXXXXXXKOxol;''''',,'...''''',;,..cKWMMMMMMMMMMMM
+	MMMMMMMMMMMMNo..,,'''''''...';;;,..',''';lkXXXXXXXXXXXXXKkl:;;;;::::::::;,'..''''',,.'kWMMMMMMMMMMMM
+	MMMMMMMMMMMWd..,'''''''''....',,;'.''..',;lOKKKXXXXXXXKkl:;::::::::::::::::,..''''',,.'0MMMMMMMMMMMM
+	MMMMMMMMMMM0,.'''..''''''.. ..'''...'.....',,,:lcccccc;',::::::::::::::::::;...'...',..lWMMMMMMMMMMM
+	MMMMMMMMMMMO..''...''''''........'....   ......;c::::,..'''''''''',;::::::::,..''...''.:XMMMMMMMMMMM
+	MMMMMMMMMMMO..........''''''..  ...........',,,lkkkkkl....''.''....'',,,;;,'''......'..:XMMMMMMMMMMM
+	MMMMMMMMMMMX:.....  .'''....   ........'''..',,:kXXXO;...............''.....,;,.  .....dWMMMMMMMMMMM
+	MMMMMMMMMMMMKl...od;.....'.  ..,,;;;,,'....'''..,ldl;. ................... .'::;'.  .,xNMMMMMMMMMMMM
+	MMMMMMMMMMMMMW0kKWMXkoxO0o..';;:::::::::;;,'''........ ................... .';:::;. 'OMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMO. .;:::::::::::::::;,'.... .';,...................,;::::;'.:0MMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMX;  .;::::::::::::::::;..'...'::;,'............. ..';::::::'.cNMMMMMMMMMMMM
+	*/
+	"https://videos.hubchicken.tk/atlas_earth.mov",
+	"https://videos.hubchicken.tk/Fortnite_MrBeast_versus_Lara_Croft_versus_Goku_versus_Indiana_Jones_versus_Superman_versus_Walter_White_versus_Adolf_Hitler_versus_Barack_Obama_versus_Martin_Luther_King_versus_Kim_Jong-Il_versus_Thanos_versus_Che_guevera_versus.mp4",
+	"https://videos.hubchicken.tk/mossballs.mp4",
+	"https://videos.hubchicken.tk/meow.mp4",
+	"https://videos.hubchicken.tk/funydance.mp4",
+	"https://videos.hubchicken.tk/my_favourite_splatoon_weapons.mp4",
+	"https://videos.hubchicken.tk/top_10_video_world.mp4",
+	"https://videos.hubchicken.tk/yeeeah.mp4",
+	"https://videos.hubchicken.tk/Christmas_dont_be_late.webm",
+	"https://videos.hubchicken.tk/ytpmv elf.mp4",
+	"https://videos.hubchicken.tk/duck_sound_in_high_quality.mp4",
+	"https://videos.hubchicken.tk/gbspeedrun.mp4",
+	"https://videos.hubchicken.tk/oo.mp4",
+	"https://videos.hubchicken.tk/weird_scout.mp4",
+	"https://videos.hubchicken.tk/turky_kitchen_ideas.mp4",
+	"https://videos.hubchicken.tk/push_the_button.mp4",
+	"https://videos.hubchicken.tk/shadow_gru.mp4",
+	"https://videos.hubchicken.tk/no_e3.mp4",
+	"https://videos.hubchicken.tk/hello_everybody.mp4",
+	"https://videos.hubchicken.tk/do_you_feel_nostalgic_for.mp4",
+	"https://videos.hubchicken.tk/medick.mp4",
+	"https://videos.hubchicken.tk/michael_griddy.mp4",
+	"https://videos.hubchicken.tk/borb.mp4",
+	"https://videos.hubchicken.tk/examine.mp4",
+	"https://videos.hubchicken.tk/allah_and_fart.webm",
+	"https://videos.hubchicken.tk/Vegeta_Reacts_To_The_Saiyan_Walk_Official_MUSIC_VI.mp4",
+	"https://videos.hubchicken.tk/How_to_make_a_Boat_that_moves_on_water.mp4",
+	"https://videos.hubchicken.tk/How_to_do_the_Toilet_Glitch_On_Roblox_With_Stamper_tool.mp4",
+	"https://videos.hubchicken.tk/twerking_chicken.mp4",
+	"https://videos.hubchicken.tk/i_am_just_a_freak.mp4",
+	"https://videos.hubchicken.tk/down_to_earth.mp4",
+	"https://videos.hubchicken.tk/freaky_parrot.mp4",
+	"https://videos.hubchicken.tk/tributo_to_anomalocaris.mp4",
+	"https://videos.hubchicken.tk/cheeseballs.mov"
 	//
 ]
 
