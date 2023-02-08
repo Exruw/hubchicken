@@ -3541,7 +3541,57 @@ var videoArray = [
 	"https://videos.hubchicken.tk/down_to_earth.mp4",
 	"https://videos.hubchicken.tk/freaky_parrot.mp4",
 	"https://videos.hubchicken.tk/tributo_to_anomalocaris.mp4",
-	"https://videos.hubchicken.tk/cheeseballs.mov"
+	"https://videos.hubchicken.tk/cheeseballs.mov",
+	//2003boobear, 2/8/2023.
+	//'videos/mgs2ai.mp4', //origin issue, someone uploaded a file with a super long name, can't grab origin from the desktop app. cant upload these files because they're too big for the website version
+	'videos/BEAR_5.mov',
+	'videos/BEAR_5_FIGHT.mp4',
+	'videos/wagoo_wagoo.mp4',
+	'videos/stances.mp4',
+	'videos/alternates.mp4',
+	'videos/g.mp4',
+	'videos/DREAM_IS_A_TRIPLET.mov',
+	'videos/ultimit_power.mov',
+	'videos/gamesalmon.mov',
+	'videos/SUPERSONIC.mov',
+	'videos/He_honk.mov',
+	'videos/thatfuckinbirdthatihate.mp4',
+	'videos/ronaldophonecall.mp4',
+	'videos/weatherreportdiscovery.mp4',
+	'videos/BMW_Blinker.mov',
+	'videos/caillou_beatsaber.mp4',
+	'videos/whats_wrong_wit_me_compute.mp4',
+	'videos/bigfriendlycat.mov',
+	'videos/lostfortres2.mp4',
+	'videos/LIBERALSTORE.mov',
+	'videos/subnauticawindow.mov',
+	'videos/depthsmobs.mp4',
+	'videos/not_a_cat.mp4',
+	'videos/beloved_kitty.mov',
+	'videos/trucktantrum.mp4',
+	'videos/agressivescientist.mp4',
+	'videos/Password.mov',
+	'videos/witnessthemiracle.mp4',
+	'videos/family_guy_homunculus.mp4',
+	'videos/sonic3iscoming.mov',
+	'videos/Fish_Fraud.mov',
+	'videos/Portal_2_Leaked_Cave_Johnson_Unused_Voiceline.mp4',
+	'videos/THATS_NOT_CANCELED.mp4',
+	'videos/yagami_win.mp4',
+	'videos/YTP3.mp4',
+	'videos/EPICFICTIONALRAPBATTLES.mp4',
+	'videos/CanadianLumberjack.mp4',
+	'videos/bubble_blowing_baby.mov',
+	'videos/hellskitchenyourself.mov',
+	'videos/kittypersonality.mp4',
+	'videos/the_cato_EEK.mov',
+	'videos/A-999.mov',
+	'videos/discordmessages.mov',
+	'videos/robloxtruckrp.mov',
+	//'videos/Quantum_Physics_Full_Course1.mp4', //origin issue
+	//'videos/Quantum_Physics_Full_Course2.mp4', //origin issue
+	//'videos/Quantum_Physics_Full_Course3.mp4', //origin issue
+	//'videos/Quantum_Physics_Full_Course4.mp4' //origin issue
 	//
 ]
 
