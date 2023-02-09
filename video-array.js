@@ -3583,7 +3583,23 @@ var videoArray = [
 	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course1.mp4',
 	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course2.mp4',
 	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course3.mp4',
-	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course4.mp4'
+	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course4.mp4',
+	// 2/9/2023 who cares though
+	'https://videos.hubchicken.tk/murder_mystery_2.mp4',
+	'https://videos.hubchicken.tk/the_big_reveal.mov',
+	'https://videos.hubchicken.tk/pencil.mp4',
+	'https://videos.hubchicken.tk/cars_vs_giant_bulge.mp4',
+	'https://videos.hubchicken.tk/mario_party.mp4',
+	'https://videos.hubchicken.tk/fan_ytp.mp4',
+	'https://videos.hubchicken.tk/what_do_you_want_son.mp4',
+	'https://videos.hubchicken.tk/modern_warfare_2_realism.mp4',
+	'https://videos.hubchicken.tk/breathe_in.mp4',
+	'https://videos.hubchicken.tk/sora_reveal.mp4',
+	'https://videos.hubchicken.tk/shadow_reveal.mp4',
+	'https://videos.hubchicken.tk/they_got_spunch_bobs_shit.mp4',
+	'https://videos.hubchicken.tk/monster_hunter.mp4',
+	'https://videos.hubchicken.tk/banished_to_the_app_store.mp4',
+	'https://videos.hubchicken.tk/calculated.mp4'
 	//
 ]
 
