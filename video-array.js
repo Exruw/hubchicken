@@ -2383,7 +2383,6 @@ var videoArray = [
 	//
 	//  			          - delimiters -
 	//
-	'https://videos.hubchicken.tk/._.XD.mp4',
 	'https://videos.hubchicken.tk/10_people.mp4',
 	'https://videos.hubchicken.tk/39.mp4',
 	'https://videos.hubchicken.tk/57433866.mp4',
