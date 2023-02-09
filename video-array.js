@@ -3535,7 +3535,7 @@ var videoArray = [
 	"https://videos.hubchicken.tk/tributo_to_anomalocaris.mp4",
 	"https://videos.hubchicken.tk/cheeseballs.mov",
 	//2003boobear, 2/8/2023.
-	//'videos/mgs2ai.mp4', //origin issue, someone uploaded a file with a super long name, can't grab origin from the desktop app. cant upload these files because they're too big for the website version
+	'https://videos.hubchicken.tk/mgs2ai.mp4', //you have to make this video links now?
 	'https://videos.hubchicken.tk/BEAR_5.mov',
 	'https://videos.hubchicken.tk/BEAR_5_FIGHT.mp4',
 	'https://videos.hubchicken.tk/wagoo_wagoo.mp4',
@@ -3580,10 +3580,10 @@ var videoArray = [
 	'https://videos.hubchicken.tk/A-999.mov',
 	'https://videos.hubchicken.tk/discordmessages.mov',
 	'https://videos.hubchicken.tk/robloxtruckrp.mov',
-	//'videos/Quantum_Physics_Full_Course1.mp4', //origin issue
-	//'videos/Quantum_Physics_Full_Course2.mp4', //origin issue
-	//'videos/Quantum_Physics_Full_Course3.mp4', //origin issue
-	//'videos/Quantum_Physics_Full_Course4.mp4' //origin issue
+	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course1.mp4',
+	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course2.mp4',
+	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course3.mp4',
+	'https://videos.hubchicken.tk/Quantum_Physics_Full_Course4.mp4'
 	//
 ]
 
