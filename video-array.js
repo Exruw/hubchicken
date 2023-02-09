@@ -6,7 +6,6 @@
 // THE ONLY SPECIAL CHARACTERS THAT ARE ACCEPTABLE ARE _ - , . !
 // I DO NOT WANT TO WRITE ASCII CODES WHEN I LINK THE VIDEOS IT'S TOO MUCH OF A FUCKING HASSLE
 // - ShadeblastHere
-
 // WHY ARE YOU USING SINGLE QUOTES 
 
 // L kid
@@ -1524,7 +1523,6 @@ var videoArray = [
 	//  	       - No witty comment has been made for this update. -
 	//
 	'https://videos.hubchicken.tk/21stcentury.mp4',
-	'https://videos.hubchicken.tk/3-easy-steps-to-____.mp4',
 	'https://videos.hubchicken.tk/5_nights_at_petahs.mp4',
 	'https://videos.hubchicken.tk/__-FINAL_FANTASY-__.mp4',
 	'https://videos.hubchicken.tk/ALLCOLORS.mp4',
