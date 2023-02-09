@@ -158,3 +158,4 @@ video::-webkit-media-controls-current-time-display {display: none}
 video::-webkit-media-controls-time-remaining-display {display: none}
 video::-webkit-media-controls-fullscreen-button {display: none}
 video::-webkit-media-controls-panel {background-image: none}
+video::-webkit-media-controls {background: none}
