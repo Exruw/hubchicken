@@ -27,7 +27,7 @@
 
 		<div class="content-container">
 			<a style="text-align: center;" id="video-link" download></a>
-			<video id="video">
+			<video id="video" controls = true disablePictureInPicture controlsList = "noplaybackrate nodownload nofullscreen">
 				<source id="video-source" src="">
 			</video>
 			<input type="button" value="Click this to load a random video"
@@ -104,8 +104,10 @@
 			automode.addEventListener("click",changeboolAM)
 			video.addEventListener("ended", automodehandler, false);
 			videoButton.addEventListener("click", addVideo);
+			video.onpause = video.play
 			/** @type {<Type>(arr: Type[]) => Type} */
 			const random = arr => arr[Math.floor(Math.random() * arr.length)]
+			
 			function particles({
 				amount = 50,
 				delay = 10,
