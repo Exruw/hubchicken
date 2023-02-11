@@ -3228,7 +3228,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/arcade.mp4',
 	'https://videos.hubchicken.tk/Baloingus.mp4',
 	'https://videos.hubchicken.tk/bee.mov',
-	'https://videos.hubchicken.tk/bees.mp4',
 	'https://videos.hubchicken.tk/bruh.mp4',
 	'https://videos.hubchicken.tk/burger_1.mp4',
 	'https://videos.hubchicken.tk/bus.mp4',
@@ -3545,8 +3544,12 @@ var videoArray = [
 	'https://videos.hubchicken.tk/late_night_vc.mp4',
 	'https://videos.hubchicken.tk/lasagna.mp4',
 	'https://videos.hubchicken.tk/youre_mad_youre_mad.mp4',
-	'https://videos.hubchicken.tk/PELASEEE.mp4'
+	'https://videos.hubchicken.tk/PELASEEE.mp4',
 	//
+	// 11/2/2023 --hallo i am dokso i can add videos now thaks
+	'https://videos.hubchicken.tk/bees.mp4',
+	'https://videos.hubchicken.tk/IM-NOT-A-MORON.mp4',
+	'https://videos.hubchicken.tk/AJJHH.mp4'
 ]
 
 export function getArray() {
