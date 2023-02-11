@@ -3552,7 +3552,7 @@ var videoArray = [
 	'https://videos.hubchicken.tk/they_got_spunch_bobs_shit.mp4',
 	'https://videos.hubchicken.tk/monster_hunter.mp4',
 	'https://videos.hubchicken.tk/banished_to_the_app_store.mp4',
-	'https://videos.hubchicken.tk/calculated.mp4'
+	'https://videos.hubchicken.tk/calculated.mp4',
 	// 2/11/2023
 	'https://videos.hubchicken.tk/he_tryna_leave.mov',
 	'https://videos.hubchicken.tk/didnt_i_do_it_for_you.mp4',
@@ -3590,7 +3590,7 @@ var videoArray = [
 	'https://videos.hubchicken.tk/late_night_vc.mp4',
 	'https://videos.hubchicken.tk/lasagna.mp4',
 	'https://videos.hubchicken.tk/youre_mad_youre_mad.mp4',
-	'https://videos.hubchicken.tk/PELASEEE.mp4',
+	'https://videos.hubchicken.tk/PELASEEE.mp4'
 	//
 ]
 
