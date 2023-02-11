@@ -2214,7 +2214,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/cat_beatz.mp4',
 	'https://videos.hubchicken.tk/cat_eats_light.mp4',
 	'https://videos.hubchicken.tk/chad.mp4',
-	'https://videos.hubchicken.tk/deepfried_tomato.mp4',
 	'https://videos.hubchicken.tk/deepwoken.mp4',
 	'https://videos.hubchicken.tk/DEMON_CORE.mp4',
 	'https://videos.hubchicken.tk/dooog.mp4',
