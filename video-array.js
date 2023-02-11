@@ -557,7 +557,7 @@ var videoArray = [
 	'https://videos.hubchicken.tk/bababooey.mp4',
 	'https://videos.hubchicken.tk/cringe-1.mp4',
 	'https://videos.hubchicken.tk/gondal.mp4',
-	'https://videos.hubchicken.tk/1587476541539.mp4',
+	'https://videos.hubchicken.tk/1587476541539.webm',
 	'https://videos.hubchicken.tk/kokakola.mp4',
 	'https://videos.hubchicken.tk/Video_by_chesterstone745-CBjpyrZnidB.mp4',
 	'https://videos.hubchicken.tk/asse.mp4',
@@ -2829,7 +2829,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/pitbull_go.mp4',
 	'https://videos.hubchicken.tk/Portal_Cake_Recipe.mp4',
 	'https://videos.hubchicken.tk/POWER.mp4',
-	'https://videos.hubchicken.tk/Purple_Colored_Clown.mp4',
 	'https://videos.hubchicken.tk/real_1.mov',
 	'https://videos.hubchicken.tk/riddle-.mp4',
 	'https://videos.hubchicken.tk/rule6.mp4',
@@ -2873,7 +2872,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/woahyoure.mp4',
 	'https://videos.hubchicken.tk/yellow_fish.mp4',
 	'https://videos.hubchicken.tk/YOU_SON_OF_A_BITCH.mp4',
-	'https://videos.hubchicken.tk/yugioh_in_mugen.mp4',
 	'https://videos.hubchicken.tk/zs.mp4',
 	//2003boobear, 6/2/2022. shade i do not care what you think at all
 	'https://videos.hubchicken.tk/serious_room.mp4',
@@ -3131,7 +3129,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/people_playground.mp4',
 	'https://videos.hubchicken.tk/pepeno.mp4',
 	'https://videos.hubchicken.tk/PLAYSTATION_PLUS.mov',
-	'https://videos.hubchicken.tk/Purple_Colored_Clown_.mp4',
 	'https://videos.hubchicken.tk/py.mp4',
 	'https://videos.hubchicken.tk/rejected.mp4',
 	'https://videos.hubchicken.tk/roblox_tycoon.mp4',
@@ -3310,9 +3307,7 @@ var videoArray = [
 	'https://videos.hubchicken.tk/jumper.mp4',
 	'https://videos.hubchicken.tk/kiry_rapping.mp4',
 	'https://videos.hubchicken.tk/kiss_my_ass.mp4',
-	'https://videos.hubchicken.tk/koritora.mp4',
 	'https://videos.hubchicken.tk/krabsfuckingdies.mp4',
-	'https://videos.hubchicken.tk/la.mp4',
 	'https://videos.hubchicken.tk/leaf.mp4',
 	'https://videos.hubchicken.tk/legalize_nuclear_bombs.mp4',
 	'https://videos.hubchicken.tk/lion_takes_down_man.mp4',
@@ -3411,49 +3406,9 @@ var videoArray = [
 	'https://videos.hubchicken.tk/whip.mov',
 	// yagevil changed
 	'https://videos.hubchicken.tk/YOUR_EDITOR_HUNG_HIMSELF.mp4',
-	'https://videos.hubchicken.tk/zakro.mp4',
-	'https://videos.hubchicken.tk/zakro_the_clones.mp4',
 	'https://videos.hubchicken.tk/zoltyn.mp4',
 	'https://videos.hubchicken.tk/ztym.mp4',
 	'https://videos.hubchicken.tk/zyne.mp4',
-	/*
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNWMKolokWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXXWMMMMMMMMMMMMWNXKkxXNNMMMMMMMMMWXXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-	MMMMMMMMMMMN00KXNNNNNNNXKKOkxoc:;,cOWMMMMMMMMMMWO:,:kNMMMMMMMMMWOc,;:coxkOKKXNNNNNNNXK00NMMMMMMMMMMM
-	MMMMMMMMMMKc..',;,,,;;;,,,'',,;clc;'c0WMMMMWNKKKkc,',xXNWMMMMW0c,;llc;,,'',,,;;,,,,;,'..cKMMMMMMMMMM
-	MMMMMMMMMMNl.'::::::cclloooddddolloc''xKkolcc:;;;'..';:ccldOKx''ldllodddooolccc:;;;::;'.lXMMMMMMMMMM
-	MMMMMMMMMMMNx;';looooooddddddddol;;c,..,;:ldxxxoclodxdoooc;;,..;c;;lodoooooooolllllc;',xNMMMMMMMMMMM
-	MMMMMMMMMMMMNx..':looooodddddoodd:..,:ldxxxxkxxkxxkxxxoloxxdoc,,..:oooooooooollllc;'..xNMMMMMMMMMMMM
-	MMMMMMMMMWXx:'';::cloooooddddoc:;,.,lxxxxdxxxxxxxxxxxxxl:lddddo:'.,::clooooolllll::;,'':xXWMMMMMMMMM
-	MMMMMMMNOl,',:cllllllooooooool;..':odxxxocoxxxxxxxxxdddo::ddddooc:,.,:llollllllllccccc:,.,lONMMMMMMM
-	X00K0xl;'',:cccccllllllloolc:'..;odddddd:,lxddddddddddddc';looooool:,',:clllllllcccccc:::,..;lx0KKXN
-	;..'...,::::ccccccclllllll:;..':looooolc,.;ooooooooollool..,cloollllc,',;:cllllccccccc::::;;,...'..;
-	; .',;;:::::::::ccccclllc:,.',;clllll::lo,'cccoooooolclol'.'::clllllc;,',,;:ccccccc:::::::;;;;,'.. ;
-	K:..''',,,,;;;;:ccccccc:;,.',;clllc:;:ccc;.,;,cllllllc:cc'..,::::llllc,''',;:cccccc::;;;,,''''''..:K
-	MNd,.';:::::::::::cc:;;,,..',cll:;,'........'',clllllc,;:,.''';:;;;ccc;'..',,;ccccc::::::;;;;,..,dNM
-	MMMXd;'.',;:::::::;;,,,,'...,;;'...............':ccccc;',,.';,'.''..,;;'...,,,;:::::::::;;,'..;dXWMM
-	MMMMMN0xl:'.,;;,,,''''',....'...  ...............,;:cc:'... .........',,...',,,,;;:::::,.':lx0NMMMMM
-	MMMMMMMMM0;.',''''''''',. ...',.  ..............,,',,;;'.......'';,.',''. .','''',,,,,,'.;0MMMMMMMMM
-	MMMMMMMMXc..'''''''''''''..,;;;..'........'',,,cxkxo;,,'..,:,..',l:.,::;,..','''''''''''..cXMMMMMMMM
-	MMMMMMMWd..'....''''''''..,:::;.;dolclcc:clloxkkxOKKOo:,.'x0x;',:xo.;ccc:'.'''''''''.......dWMMMMMMM
-	MMMMMMMK, ..',. .'''.'''.'::::;.c0K00OOOO00KXXKOoxKKXK0kokXXKx;';do.,c:::;..'''.'''. .,'.. ,KMMMMMMM
-	MMMMMMMNl.;dKX: .'...'...,;::::.;OXXXXXXXXXXXXxodxOOOdx0XXXXXKd,'ol',:::;;...''...'. :XKd;.lNMMMMMMM
-	MMMMMMMMNKNMMMO,..........';:::',OXXXXK0XXXXXKOl;;;;;:dKXXXXXXO:,oo,;:::,'..........'OMMMNKNMMMMMMMM
-	MMMMMMMMMMMXkdl,  ...,,....;:::,,kXXXXOkKKKXXXXx:;,,,;kXXXXXXXKl,ol';:::,....,'...  ,ox0WMMMMMMMMMMM
-	MMMMMMMMMMKc....',,;;:;'...;:::;'oXXXKOO0OOKKXXKOdolcdKXXXXXXXXd,c:';:;;'....;;;;,''....dWMMMMMMMMMM
-	MMMMMMMMMMWOc'.',;;;;;,,'..,::::'c0K0xlodkOOKXXXXXXKKXXXXXXXXXXd;:,.''''...''',;;;;,'.,oKWMMMMMMMMMM
-	MMMMMMMMMMMMWk,..;;,,''''..';:::''lxd;',;:lkKXXXXXXXXXXXXXKOxol;''''',,'...''''',;,..cKWMMMMMMMMMMMM
-	MMMMMMMMMMMMNo..,,'''''''...';;;,..',''';lkXXXXXXXXXXXXXKkl:;;;;::::::::;,'..''''',,.'kWMMMMMMMMMMMM
-	MMMMMMMMMMMWd..,'''''''''....',,;'.''..',;lOKKKXXXXXXXKkl:;::::::::::::::::,..''''',,.'0MMMMMMMMMMMM
-	MMMMMMMMMMM0,.'''..''''''.. ..'''...'.....',,,:lcccccc;',::::::::::::::::::;...'...',..lWMMMMMMMMMMM
-	MMMMMMMMMMMO..''...''''''........'....   ......;c::::,..'''''''''',;::::::::,..''...''.:XMMMMMMMMMMM
-	MMMMMMMMMMMO..........''''''..  ...........',,,lkkkkkl....''.''....'',,,;;,'''......'..:XMMMMMMMMMMM
-	MMMMMMMMMMMX:.....  .'''....   ........'''..',,:kXXXO;...............''.....,;,.  .....dWMMMMMMMMMMM
-	MMMMMMMMMMMMKl...od;.....'.  ..,,;;;,,'....'''..,ldl;. ................... .'::;'.  .,xNMMMMMMMMMMMM
-	MMMMMMMMMMMMMW0kKWMXkoxO0o..';;:::::::::;;,'''........ ................... .';:::;. 'OMMMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMO. .;:::::::::::::::;,'.... .';,...................,;::::;'.:0MMMMMMMMMMMMM
-	MMMMMMMMMMMMMMMMMMMMMMMMMX;  .;::::::::::::::::;..'...'::;,'............. ..';::::::'.cNMMMMMMMMMMMM
-	*/
 	"https://videos.hubchicken.tk/atlas_earth.mov",
 	"https://videos.hubchicken.tk/mossballs.mp4",
 	"https://videos.hubchicken.tk/meow.mp4",
