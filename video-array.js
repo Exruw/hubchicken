@@ -757,7 +757,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/demoman.mp4',
 	'https://videos.hubchicken.tk/sick_thomas_the_train_tricks.mp4',
 	'https://videos.hubchicken.tk/my_cat.mp4',
-	'https://videos.hubchicken.tk/Grizzly.mp4',
 	'https://videos.hubchicken.tk/brick_fall.mp4',
 	'https://videos.hubchicken.tk/Im_late.mp4',
 	'https://videos.hubchicken.tk/AMAZIIIIING.mp4',
@@ -1133,10 +1132,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/bruh_who.mp4',
 	'https://videos.hubchicken.tk/super_mario_odyssey_nuke.mp4',
 	'https://videos.hubchicken.tk/Los_Angeles_rush_hour_traffic.mp4',
-	'https://videos.hubchicken.tk/universal_crime.mp4', //READ
-	'https://videos.hubchicken.tk/yodazo.mp4', //EM
-	'https://videos.hubchicken.tk/fairy_flip.mp4', //AND
-	'https://videos.hubchicken.tk/8008135.mov', //WEEP
 	/*
 	░░██████████████████░░░░░
 	░████████░░░░░░░░░░░░████
