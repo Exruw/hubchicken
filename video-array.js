@@ -22,7 +22,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/rappingcat.mp4',
 	'https://videos.hubchicken.tk/veggietale.mp4',
 	'https://videos.hubchicken.tk/catbeats.mp4',
-	'https://videos.hubchicken.tk/mathclass.mp4',
 	'https://videos.hubchicken.tk/halflife.mp4',
 	'https://videos.hubchicken.tk/ltg.mp4',
 	'https://videos.hubchicken.tk/cat_tube.mp4',
@@ -118,7 +117,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/experimente.mp4',
 	'https://videos.hubchicken.tk/exploiters.mp4',
 	'https://videos.hubchicken.tk/sex_win.mp4',
-	'https://videos.hubchicken.tk/chirumiru.mp4',
 	'https://videos.hubchicken.tk/screwthenether.mp4', //(UN)omitted
 	'https://videos.hubchicken.tk/sew_ner.mp4',
 	'https://videos.hubchicken.tk/video0_9-9.mp4',
@@ -352,7 +350,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/i_was_born.mp4',
 	'https://videos.hubchicken.tk/wii.mp4',
 	'https://videos.hubchicken.tk/bacon.mp4',
-	'https://videos.hubchicken.tk/lets_goooooooooo.mp4',
 	'https://videos.hubchicken.tk/bowl.mp4',
 	'https://videos.hubchicken.tk/music.mp4',
 	'https://videos.hubchicken.tk/hello.mp4',
@@ -570,7 +567,7 @@ var videoArray = [
 	'https://videos.hubchicken.tk/duck.mp4',
 	'https://videos.hubchicken.tk/Herobrine_Vs_Slenderman.mp4',
 	'https://videos.hubchicken.tk/themilkman.mp4',
-	'https://videos.hubchicken.tk/nyanyanyanyanya.mp4', // Love the video? Hate the video?
+
 	'https://videos.hubchicken.tk/OH.mp4',
 	'https://videos.hubchicken.tk/tyler.mp4',
 	'https://videos.hubchicken.tk/computer_man.mp4',
@@ -583,9 +580,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/nyaaaum.mp4',
 	'https://videos.hubchicken.tk/qotd.mp4',
 	// that should be enough (for my sanity)
-	//
-	// Hey 11/10/2021
-	'https://videos.hubchicken.tk/02.webm', // HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
 	//
 	//11/11/2021 2003boobear
 	//genius!
@@ -790,7 +784,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/epicdancing.mp4',
 	'https://videos.hubchicken.tk/gato_magic.mp4',
 	'https://videos.hubchicken.tk/gman.mp4',
-	'https://videos.hubchicken.tk/HOW_DO_YOU_MESS_UP_A_SANDWICH.mp4',
 	'https://videos.hubchicken.tk/jesue.mp4',
 	'https://videos.hubchicken.tk/loadsamoney.mp4',
 	'https://videos.hubchicken.tk/marisa.mp4',
@@ -865,31 +858,19 @@ var videoArray = [
 	//  		 - one of the mp4s i downloaded made me go insane -
 	//
 	'https://videos.hubchicken.tk/01X01-The-Froggy-Apple-Crumble.mp4',
-	'https://videos.hubchicken.tk/6EUYBWhVkKg.mp4', //(UN)omitted
 	'https://videos.hubchicken.tk/agk.mp4',
 	'https://videos.hubchicken.tk/agk_tylenol.mp4',
 	'https://videos.hubchicken.tk/Anti_Bob_Ross.mp4',
-	'https://videos.hubchicken.tk/bonkumiru.mp4',
-	//'https://videos.hubchicken.tk/chirumiru_midi.mp4',
 	'https://videos.hubchicken.tk/CREEPER_RAP.mp4',
-	'https://videos.hubchicken.tk/divamiru.mp4',
-	'https://videos.hubchicken.tk/engimiru.mp4',
 	'https://videos.hubchicken.tk/fox_steals_womans_phone.mp4',
-	'https://videos.hubchicken.tk/gangnamiru.mp4',
 	'https://videos.hubchicken.tk/heavylaugh.mp4',
 	'https://videos.hubchicken.tk/how_do_i_call_this.mp4',
 	'https://videos.hubchicken.tk/insanity_at_its_finest.mp4',
-	'https://videos.hubchicken.tk/jonumiru.mp4',
-	'https://videos.hubchicken.tk/kitchenmiru.mp4',
 	'https://videos.hubchicken.tk/Minecraft_Volume_Alpha.mp4',
 	'https://videos.hubchicken.tk/not_oneshot.mp4',
 	'https://videos.hubchicken.tk/overdrive.mp4',
-	'https://videos.hubchicken.tk/pissumiru.mp4',
 	'https://videos.hubchicken.tk/rainbow_trololol.mp4',
-	'https://videos.hubchicken.tk/reimu.mp4',
 	'https://videos.hubchicken.tk/rogueracist.mov',
-	'https://videos.hubchicken.tk/sandwichmiru.mp4',
-	'https://videos.hubchicken.tk/slamiru.mp4',
 	'https://videos.hubchicken.tk/slugger.mp4',
 	'https://videos.hubchicken.tk/spongebobb.mp4',
 	'https://videos.hubchicken.tk/stupid_idiot.mp4',
@@ -910,8 +891,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/REALgamers.mp4',
 	'https://videos.hubchicken.tk/dont_screenshot_nfts_.mp4',
 	'https://videos.hubchicken.tk/Alcoholism.mp4',
-	'https://videos.hubchicken.tk/bad_cramp.mp4', //HEY ShadeblastHere
-	'https://videos.hubchicken.tk/based_as_fuck.mp4', //CRY
 	'https://videos.hubchicken.tk/car_alarms_everywhere.mp4',
 	'https://videos.hubchicken.tk/big_shot_but_its_small_shot.mp4',
 	'https://videos.hubchicken.tk/B_O_N_K.mp4',
@@ -1185,10 +1164,8 @@ var videoArray = [
 	'https://videos.hubchicken.tk/step_on_the_gas.mp4',
 	'https://videos.hubchicken.tk/Poom.mp4',
 	'https://videos.hubchicken.tk/anonymous_helicoptor.mp4',
-	'https://videos.hubchicken.tk/uwaaaaaaaa.mp4', //https://www.youtube.com/watch?v=DGeLYYtb3jw
 	'https://videos.hubchicken.tk/anti_LGBTQ_car.mov',
 	'https://videos.hubchicken.tk/high_tier_vegeta.mov',
-	'https://videos.hubchicken.tk/wtf.mov', //https://www.youtube.com/watch?v=DGeLYYtb3jw
 	//2003boobear, 12/05/2021
 	'https://videos.hubchicken.tk/this_wall.mp4',
 	'https://videos.hubchicken.tk/alex.mp4',
@@ -1209,7 +1186,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/quinc.mp4',
 	'https://videos.hubchicken.tk/jump_at_your_own_risk.mp4',
 	'https://videos.hubchicken.tk/REAL_LIFE_LOW_TIER_GOD.mp4',
-	'https://videos.hubchicken.tk/booba.mp4', //💀
 	'https://videos.hubchicken.tk/jacket_music.mov',
 	//i dont know who added the lower links but it wasnt me -2003
 	'https://videos.hubchicken.tk/anal_penetration_porn_sex_sex_porn_sex_among_us_imposter.mp4',
@@ -1251,14 +1227,12 @@ var videoArray = [
 	'https://videos.hubchicken.tk/goku_irl.mp4',
 	'https://videos.hubchicken.tk/hona.mp4',
 	'https://videos.hubchicken.tk/joel.mp4',
-	'https://videos.hubchicken.tk/niipah.mp4',
 	'https://videos.hubchicken.tk/fanf.mp4', //(UN)omitted
 	'https://videos.hubchicken.tk/Barack_Obama_vs_Mitt_Romney.mp4', //NO WAY
 	'https://videos.hubchicken.tk/minecraft_in_a_cave.mp4',
 	'https://videos.hubchicken.tk/NO.mov',
 	'https://videos.hubchicken.tk/engine.mov',
 	'https://videos.hubchicken.tk/best_burrito.mov',
-	'https://videos.hubchicken.tk/buuurp.mov', //lol
 	//
 	// 			        12/ 8/2021
 	// 			      ShadeblastHere
@@ -1745,7 +1719,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/eyo.mp4',
 	'https://videos.hubchicken.tk/facebook_marketplace.mp4',
 	'https://videos.hubchicken.tk/flying_cj.mp4',
-	'https://videos.hubchicken.tk/gao.mp4',
 	'https://videos.hubchicken.tk/gtasatrollface.mp4',
 	'https://videos.hubchicken.tk/heyrememberwhenthiswasfunny.mp4',
 	//'https://videos.hubchicken.tk/hot_rod_trainer.webm', //omitted
@@ -2010,7 +1983,6 @@ var videoArray = [
 	//
 	//  			            - oh  no -
 	//
-	'https://videos.hubchicken.tk/01.mp4',
 	'https://videos.hubchicken.tk/A_job_application..mp4',
 	'https://videos.hubchicken.tk/battle_of_wits.mp4',
 	//
@@ -2908,7 +2880,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/goku_pelea.mp4',
 	'https://videos.hubchicken.tk/Im_going_to_rip_you_apart.mp4',
 	'https://videos.hubchicken.tk/society_built_by_monkeys.mp4',
-	'https://videos.hubchicken.tk/CHEAPIES.mp4',
 	'https://videos.hubchicken.tk/Au.mp4',
 	'https://videos.hubchicken.tk/its_morbin_time.mp4',
 	'https://videos.hubchicken.tk/cat_barking.mp4',
@@ -3224,7 +3195,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/my_awesome_exploit.mp4',
 	'https://videos.hubchicken.tk/golfing.mp4',
 	'https://videos.hubchicken.tk/doors_if_it_was_good.mp4',
-	'https://videos.hubchicken.tk/milkoff.mp4',
 	'https://videos.hubchicken.tk/Plants_VS_Zombies_Eternal.mov',
 	'https://videos.hubchicken.tk/Metal_Gear_Solid.mp4',
 	'https://videos.hubchicken.tk/cowball.mov',
@@ -3259,9 +3229,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/animul.mp4',
 	'https://videos.hubchicken.tk/arakawa_carnage_saw.mp4',
 	'https://videos.hubchicken.tk/arcade.mp4',
-	'https://videos.hubchicken.tk/axez.mp4',
-	'https://videos.hubchicken.tk/axez_compose_at_last_minute.mp4',
-	'https://videos.hubchicken.tk/axez_house_explosion.mp4',
 	'https://videos.hubchicken.tk/Baloingus.mp4',
 	'https://videos.hubchicken.tk/bee.mov',
 	'https://videos.hubchicken.tk/bees.mp4',
@@ -3341,8 +3308,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/joke.mp4',
 	'https://videos.hubchicken.tk/jsdiafars.mp4',
 	'https://videos.hubchicken.tk/jumper.mp4',
-	'https://videos.hubchicken.tk/kashikin.mp4',
-	'https://videos.hubchicken.tk/kashikin_chevalier.mp4',
 	'https://videos.hubchicken.tk/kiry_rapping.mp4',
 	'https://videos.hubchicken.tk/kiss_my_ass.mp4',
 	'https://videos.hubchicken.tk/koritora.mp4',
