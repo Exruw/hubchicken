@@ -865,7 +865,6 @@ var videoArray = [
 	'https://videos.hubchicken.tk/fox_steals_womans_phone.mp4',
 	'https://videos.hubchicken.tk/heavylaugh.mp4',
 	'https://videos.hubchicken.tk/how_do_i_call_this.mp4',
-	'https://videos.hubchicken.tk/insanity_at_its_finest.mp4',
 	'https://videos.hubchicken.tk/Minecraft_Volume_Alpha.mp4',
 	'https://videos.hubchicken.tk/not_oneshot.mp4',
 	'https://videos.hubchicken.tk/overdrive.mp4',
