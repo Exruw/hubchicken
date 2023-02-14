@@ -3537,7 +3537,17 @@ var videoArray = [
 	// 11/2/2023 --hallo i am dokso i can add videos now thaks
 	'https://videos.hubchicken.tk/bees.mp4',
 	'https://videos.hubchicken.tk/IM-NOT-A-MORON.mp4',
-	'https://videos.hubchicken.tk/AJJHH.mp4'
+	'https://videos.hubchicken.tk/AJJHH.mp4',
+	// 2/13/2023 poooop
+	'https://videos.hubchicken.tk/does_this_hurt_the_fish.mp4',
+	'https://videos.hubchicken.tk/fridge.mp4',
+	'https://videos.hubchicken.tk/domain_expansion.mp4',
+	'https://videos.hubchicken.tk/tranquility.mp4',
+	'https://videos.hubchicken.tk/new_layer_2_bell.mp4',
+	'https://videos.hubchicken.tk/oni_academy.mov',
+	'https://videos.hubchicken.tk/minging.mp4',
+	'https://videos.hubchicken.tk/skeleton_horse.mov',
+	'https://videos.hubchicken.tk/cosplay.mp4'
 ]
 
 export function getArray() {
