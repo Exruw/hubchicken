@@ -2,7 +2,7 @@ const videoArray = [];
 const extensions = {"mp4": true, "mov": true, "webm": true, "3gpp": true};
 (await (await fetch(`https://api.github.com/repos/Exruw/hubvideos/git/trees/${(await (await fetch("https://api.github.com/repos/Exruw/hubvideos/commits")).json())[0]?.commit?.tree?.sha}`)).json()).tree.forEach(v => {
     if (v?.type !== "tree" && v?.path && extensions[v.path.split(".").pop()])
-        videoArray.push(`https://videos.hubchicken.tk/${encodeURI(v.path)}`);
+        videoArray.push(`https://videos.hubchicken.tk/${encodeURIComponent(v.path)}`);
 });
 export function getArray()
 {
