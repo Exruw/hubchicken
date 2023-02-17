@@ -14,6 +14,8 @@ spacy (coding and videos)
 
 jack5079 (coding)
 
+jac (coding)
+
 -------------------------------
 
 **losers but still contributed:**
