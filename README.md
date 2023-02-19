@@ -33,4 +33,9 @@ jac (coding)
 
 shade (videos)
 
-![Fuck you](https://media.discordapp.net/attachments/848237686253944853/991884113248264283/971867344198570026.gif)
+-------------------------------
+**Hubchicken Creation Date:**
+
+September 18th, 2021
+
+![hubchick](https://hubchicken.tk/HUBCHICKEN.png)
