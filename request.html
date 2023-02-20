@@ -198,58 +198,33 @@
 			.content-container a:active {
 				background-color: #1a1a1a;
 			}
-
-			fieldset {
-				text-align: center;
-			}
-	</style>
-
-<div class="topbar">
-   <p>
-      Video Request<br /><a href="https://hubchicken.tk/">Go Back</a>
-   </p>
-</div>
-<div class="content-container">
-   <form name="request" method="POST" action="/success" data-netlify="true">
-      <fieldset>
-         <legend>Discord</legend>
-         <p>What is your discord?</p>
-         <input type="text" placeholder="Hubchicken#0000" name="name">
-      </fieldset>
-      <fieldset>
-         <legend>File</legend>
-         <p>Link the file you want uploaded.</p>
-         <input type="text" placeholder="https://cdn.nuclearbombs.com/nuke.mp4" name="file">
-      </fieldset>
-      <fieldset>
-         <legend>Submit Your Form:</legend>
-         <input type="submit" style="margin: auto; display: block;" value="Submit">
-         <input type="reset" style="margin: auto; display: block;" value="Reset">
-      </fieldset>
-   </form>
-</div>
-<script>
-const webhookUrl = window._env_.WEBH;
-
-document.querySelector('form[name="request"]').addEventListener('submit', async (event) => {
-	event.preventDefault();
-	const formData = new FormData(event.target);
-
-	const data = {
-		content: `Discord: ${formData.get("name")}\nFile: ${formData.get("file")}`,
-	};
-
-	await fetch(webhookUrl, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(data),
-	});
-
-	window.location.href = '/success';
-});
-</script>
-
+fieldset {
+	text-align: center;
+}
+    </style>
+		<div class="topbar">
+			<p>
+				Video Request<br /><a href="https://hubchicken.tk/">Go Back</a>
+			</p>
+		</div>
+        <div class="content-container">
+		<form name="request" method="POST" action="/success" data-netlify="true">
+			<fieldset>
+				<legend>Discord</legend>
+				<p>What is your discord?</p>
+				<input type="text" placeholder="Hubchicken#0000" name="name">
+			</fieldset>
+			<fieldset>
+            <legend>File</legend>
+				<p>Link the file you want uploaded.</p>
+				<input type="text" placeholder="https://cdn.nuclearbombs.com/nuke.mp4" name="file">
+            </fieldset>
+			<fieldset>
+				<legend>Submit Your Form:</legend>
+				<input type="submit" style="margin: auto; display: block;" value="Submit">
+				<input type="reset" style="margin: auto; display: block;" value="Reset">
+			</fieldset>
+		</form>
+        </div>
 	</body>
 </html>
