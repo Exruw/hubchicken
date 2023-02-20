@@ -8,227 +8,250 @@
 		<meta name="description" content="Request any videos you wish to be uploaded!">
 	</head>
 	<body text="#FFFFFF">
-		<style>
+    <style>
 			@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 			body {
-			margin: 0;
-			background-color: #1e1e1e;
+				margin: 0;
+				background-color: #1e1e1e;
 			}
+
 			fieldset {
-			padding: 15px;
+				padding: 15px;
 			}
+
 			legend {
-			color: white;
-			font-family: Inconsolata;
-			text-align: center;
+				color: white;
+				font-family: Inconsolata;
+				text-align: center;
 			}
+
 			input[type="text"] {
-			display: block;
-			width: 100%;
-			box-sizing: border-box;
-			padding: 5px;
-			background-color: #292929;
-			border: none;
-			outline: none;
-			margin-bottom: 5px;
-			color: white;
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			text-align: left;
-			border-radius: 5px;
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 5px;
+				background-color: #292929;
+				border: none;
+				outline: none;
+				margin-bottom: 5px;
+				color: white;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				text-align: left;
+				border-radius: 5px;
 			}
+
+
 			input[type="submit"], button {
-			display: block;
-			width: 50%;
-			background-color: #292929;
-			padding: 5px;
-			text-align: center;
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			color: white;
-			cursor: pointer;
-			border: 1px solid black;
-			border-collapse: collapse;
-			border-radius: 5px;
-			transition: background-color 0.3s;
+				display: block;
+				width: 50%;
+				background-color: #292929;
+				padding: 5px;
+				text-align: center;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				color: white;
+				cursor: pointer;
+				border: 1px solid black;
+				border-collapse: collapse;
+				border-radius: 5px;
+				transition: background-color 0.3s;
 			}
+
 			input[type="reset"] {
-			display: block;
-			width: 50%;
-			background-color: #292929;
-			padding: 5px;
-			text-align: center;
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			color: white;
-			cursor: pointer;
-			border: 1px solid black;
-			border-collapse: collapse;
-			border-radius: 5px;
-			transition: background-color 0.3s;
+				display: block;
+				width: 50%;
+				background-color: #292929;
+				padding: 5px;
+				text-align: center;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				color: white;
+				cursor: pointer;
+				border: 1px solid black;
+				border-collapse: collapse;
+				border-radius: 5px;
+				transition: background-color 0.3s;
 			}
+
 			input[type="file"] {
-			display: block;
-			width: 50%;
-			background-color: #292929;
-			padding: 10px;
-			text-align: center;
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			color: white;
-			cursor: pointer;
-			border-collapse: collapse;
-			border-radius: 5px;
-			transition: background-color 0.3s;
+				display: block;
+				width: 50%;
+				background-color: #292929;
+				padding: 10px;
+				text-align: center;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				color: white;
+				cursor: pointer;
+				border-collapse: collapse;
+				border-radius: 5px;
+				transition: background-color 0.3s;
 			}
+
 			input[type="submit"]:hover {
-			background-color: #161616;
+				background-color: #161616;
 			}
+
 			button:hover {
-			background-color: #161616;
+				background-color: #161616;
 			}
+
 			input[type="reset"]:hover {
-			background-color: #161616;
+				background-color: #161616;
 			}
+
 			textarea {
-			display: block;
-			margin: auto;
-			box-sizing: border-box;
-			padding: 5px;
-			background-color: #292929;
-			border: none;
-			outline: none;
-			margin-bottom: 5px;
-			color: white;
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			resize: none;
-			text-align: left;
-			border-radius: 5px;
+				display: block;
+				margin: auto;
+				box-sizing: border-box;
+				padding: 5px;
+				background-color: #292929;
+				border: none;
+				outline: none;
+				margin-bottom: 5px;
+				color: white;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				resize: none;
+				text-align: left;
+				border-radius: 5px;
 			}
 			.topbar {
-			display: inline-block;
-			width: 100%;
-			min-width: 320px;
-			margin: 0;
-			background-color: #262626;
-			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-			margin-bottom: 20px;
+				display: inline-block;
+				width: 100%;
+				min-width: 320px;
+				margin: 0;
+				background-color: #262626;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+				margin-bottom: 20px;
 			}
+
 			.topbar p {
-			text-align: center;
-			font-family: Inconsolata;
-			font-weight: 400;
-			font-size: 20px;
-			user-select: none;
-			color: white;
+				text-align: center;
+				font-family: Inconsolata;
+				font-weight: 400;
+				font-size: 20px;
+				user-select: none;
+				color: white;
 			}
+
 			.topbar a {
-			font-size: 15px;
-			text-decoration: none;
-			color: white;
+				font-size: 15px;
+				text-decoration: none;
+				color: white;
 			}
+
 			.topbar a:hover {
-			text-decoration: underline;
+				text-decoration: underline;
 			}
-			.content-container {
-			display: block;
-			margin: auto;
-			width: 50%;
-			min-width: 300px;
-			word-wrap: break-word;
-			background-color: #262626;
-			padding: 5px 10px;
-			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-			overflow: auto;
-			margin-bottom: 20px;
+            			.content-container {
+				display: block;
+				margin: auto;
+				width: 50%;
+				min-width: 300px;
+				word-wrap: break-word;
+				background-color: #262626;
+				padding: 5px 10px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+				overflow: auto;
+				margin-bottom: 20px;
 			}
+
 			.content-container p {
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			color: white;
-			user-select: none;
-			padding: 2px 0;
-			margin: 0;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				color: white;
+				user-select: none;
+				padding: 2px 0;
+				margin: 0;
 			}
+
 			.content-container a {
-			display: block;
-			background-color: transparent;
-			padding: 5px 10px;
-			margin: 0;
-			font-family: Inconsolata;
-			font-weight: 300;
-			font-size: 15px;
-			user-select: none;
-			text-decoration: none;
-			text-align: left;
-			color: white;
-			transition: background-color 0.25s ease,
-			text-decoration 0.25s ease;
+				display: block;
+				background-color: transparent;
+				padding: 5px 10px;
+				margin: 0;
+				font-family: Inconsolata;
+				font-weight: 300;
+				font-size: 15px;
+				user-select: none;
+				text-decoration: none;
+				text-align: left;
+				color: white;
+				transition: background-color 0.25s ease,
+					text-decoration 0.25s ease;
 			}
+
 			.content-container a:hover {
-			text-decoration: underline;
-			background-color: #212121;
+				text-decoration: underline;
+				background-color: #212121;
 			}
+
 			.content-container a:active {
-			background-color: #1a1a1a;
+				background-color: #1a1a1a;
 			}
+
 			fieldset {
-			text-align: center;
+				text-align: center;
 			}
-		</style>
-		<div class="topbar">
-			<p>
-				Video Request<br /><a href="https://hubchicken.tk/">Go Back</a>
-			</p>
-		</div>
-		<div class="content-container">
-			<form name="request" method="POST">
-				<fieldset>
-					<legend>Discord</legend>
-					<p>What is your discord?</p>
-					<input type="text" placeholder="Hubchicken#0000" name="name">
-				</fieldset>
-				<fieldset>
-					<legend>File</legend>
-					<p>Link the file you want uploaded.</p>
-					<input type="text" placeholder="https://cdn.nuclearbombs.com/nuke.mp4" name="file">
-				</fieldset>
-				<fieldset>
-					<legend>Submit Your Form:</legend>
-					<input type="submit" style="margin: auto; display: block;" value="Submit">
-					<input type="reset" style="margin: auto; display: block;" value="Reset">
-				</fieldset>
-			</form>
-		</div>
-		<script>
-			document.querySelector('form[name="request"]').addEventListener('submit', async (event) => {
-				event.preventDefault();
-			
-				const formData = new FormData(event.target);
-			
-				const data = {
-					content: `Discord: ${formData.get("name")}\nFile: ${formData.get("file")}`,
-				};
-			
-				const webhookUrlSecret = '${{ secrets.WEBH }}';
-			
-				await fetch(webhookUrlSecret, {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify(data),
-				});
-			
-				window.location.href = 'https://hubchicken.tk/success';
-			});
-		</script>
+	</style>
+
+<div class="topbar">
+   <p>
+      Video Request<br /><a href="https://hubchicken.tk/">Go Back</a>
+   </p>
+</div>
+<div class="content-container">
+   <form name="request" method="POST" action="/success" data-netlify="true">
+      <fieldset>
+         <legend>Discord</legend>
+         <p>What is your discord?</p>
+         <input type="text" placeholder="Hubchicken#0000" name="name">
+      </fieldset>
+      <fieldset>
+         <legend>File</legend>
+         <p>Link the file you want uploaded.</p>
+         <input type="text" placeholder="https://cdn.nuclearbombs.com/nuke.mp4" name="file">
+      </fieldset>
+      <fieldset>
+         <legend>Submit Your Form:</legend>
+         <input type="submit" style="margin: auto; display: block;" value="Submit">
+         <input type="reset" style="margin: auto; display: block;" value="Reset">
+      </fieldset>
+   </form>
+</div>
+<script>
+
+document.querySelector('form[name="request"]').addEventListener('submit', async (event) => {
+	event.preventDefault(); 
+
+	const formData = new FormData(event.target);
+
+	const data = {
+		content: `Discord: ${formData.get("name")}\nFile: ${formData.get("file")}`,
+	};
+
+	const webhookUrlEnv = process.env.WEBH;
+
+	await fetch(webhookUrlEnv, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(data),
+	});
+
+	window.location.href = '/success';
+});
+</script>
+</script>
 	</body>
 </html>
