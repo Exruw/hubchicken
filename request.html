@@ -229,19 +229,17 @@
    </form>
 </div>
 <script>
+const webhookUrl = window._env_.WEBH;
 
 document.querySelector('form[name="request"]').addEventListener('submit', async (event) => {
-	event.preventDefault(); 
-
+	event.preventDefault();
 	const formData = new FormData(event.target);
 
 	const data = {
 		content: `Discord: ${formData.get("name")}\nFile: ${formData.get("file")}`,
 	};
 
-	const webhookUrlEnv = process.env.WEBH;
-
-	await fetch(webhookUrlEnv, {
+	await fetch(webhookUrl, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -252,5 +250,6 @@ document.querySelector('form[name="request"]').addEventListener('submit', async 
 	window.location.href = '/success';
 });
 </script>
+
 	</body>
 </html>
