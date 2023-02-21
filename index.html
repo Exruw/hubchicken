@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -279,6 +280,7 @@
 			}
 
 			document.getElementById("hubchickenicon").addEventListener("click", () => {
+            	document.getElementById("hubchickenicon").disabled = false;
 				const audioUrl = getRandomAudio();
 				const audio = new Audio(audioUrl);
 				audio.play();
@@ -290,6 +292,7 @@
 				jumpscareImg.style.width = '100vw';
 				jumpscareImg.style.height = '100vh';
 				jumpscareImg.style.animation = 'jumpscare 1.25s forwards';
+				jumpscareImg.style.pointerEvents = 'none';
 
 				document.body.appendChild(jumpscareImg);
 
