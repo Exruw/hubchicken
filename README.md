@@ -1,9 +1,10 @@
-**Other Repositories:**
+**Links:**
 -------------------------------
 [Video Repo](https://github.com/Exruw/hubvideos/)
 
 [404 Image Repo](https://github.com/Exruw/hubcdn/)
 
+[Discord](https://discord.gg/44T3acRcWq)
 
 -------------------------------
 
