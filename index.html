@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -14,7 +15,28 @@
 		<title>Random Videos</title>
 		<link rel="stylesheet" href="https://hubchicken.tk/style.css">
 	</head>
-
+	<style>
+    	#juump {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+        @keyframes jumpscare {
+        	from {
+            	opacity: 1
+            }
+            to {
+            	opacity: 0;
+                display: none;
+            }
+        }
+    </style>
 	<body>
 		<div class="topbar">
 			<img id="hubchickenicon"
@@ -222,6 +244,27 @@
                     say("Copied to clipboard.")
 				}
 			})
+			// Random image 
+			const tensions = {"png": true};
+			const schizoimages = [];
+
+			(await (await fetch(`https://api.github.com/repos/Exruw/schizoimages/git/trees/main`)).json()).tree.forEach(v => {
+ 			   if (v?.type !== "tree" && v?.path && tensions[v.path.split(".").pop()])
+ 			       schizoimages.push(`https://schizo.hubchicken.tk/${encodeURIComponent(v.path)}`);
+			});
+
+			function schizojump() {
+   			 return schizoimages[0|(Math.random() * schizoimages.length)]
+			}
+
+			function preload(url)
+			{
+			 var img=new Image();
+    			 img.src=url;
+			}
+
+			schizoimages.forEach(preload)
+
 			// Random audios when clicking the hubchicken, the audios are stored on hubcdn if u wanna add some
 			const audiolist = [];
 			const extensions = {"mp3": true, "ogg": true};
@@ -239,6 +282,20 @@
 				const audioUrl = getRandomAudio();
 				const audio = new Audio(audioUrl);
 				audio.play();
+				const jumpscareImg = document.createElement('img');
+				jumpscareImg.src = schizojump();
+				jumpscareImg.style.position = 'fixed';
+				jumpscareImg.style.top = '0';
+				jumpscareImg.style.left = '0';
+				jumpscareImg.style.width = '100vw';
+				jumpscareImg.style.height = '100vh';
+				jumpscareImg.style.animation = 'jumpscare 1.25s forwards';
+
+				document.body.appendChild(jumpscareImg);
+
+				setTimeout(() => {
+					jumpscareImg.remove()
+				}, 1250);
 			});
 		</script>
 	</body>
