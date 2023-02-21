@@ -12,13 +12,13 @@
 		<meta property="og:description" content="Everytime you click the button, a new video appears!" />
 		<meta name="theme-color" content="#0D69AB">
 		<title>Random Videos</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://hubchicken.tk/style.css">
 	</head>
 
 	<body>
 		<div class="topbar">
-			<img id="hubchickenicon" onclick="new Audio('hubchicken.mp3').play()"
-				style="cursor: pointer;" src="HUBCHICKEN.png" alt="Hubchicken"
+			<img id="hubchickenicon"
+				style="cursor: pointer;" src="https://hubchicken.tk/HUBCHICKEN.png" alt="Hubchicken"
 				height="35" />
 			<article>
 				<p>Hubchicken.tk<br><span><em>Welcome to hell.</em></span></p>
@@ -219,10 +219,27 @@
 					})
 				} else {
 					navigator.clipboard.writeText(videoLink.href)
-					say(`Copied to clipboard.`)
+                    say("Copied to clipboard.")
 				}
 			})
+			// Random audios when clicking the hubchicken, the audios are stored on hubcdn if u wanna add some
+			const audiolist = [];
+			const extensions = {"mp3": true, "ogg": true};
+			(await (await fetch(`https://api.github.com/repos/Exruw/hubcdn/git/trees/${(await (await fetch("https://api.github.com/repos/Exruw/hubcdn/commits")).json())[0]?.commit?.tree?.sha}`)).json()).tree.forEach(v => {
+ 			   if (v?.type !== "tree" && v?.path && extensions[v.path.split(".").pop()])
+ 			       audiolist.push(`https://cdn.hubchicken.tk/${encodeURIComponent(v.path)}`);
+			});
+            
+			function getRandomAudio() {
+				const randomIndex = Math.floor(Math.random() * audiolist.length);
+				return audiolist[randomIndex];
+			}
+
+			document.getElementById("hubchickenicon").addEventListener("click", () => {
+				const audioUrl = getRandomAudio();
+				const audio = new Audio(audioUrl);
+				audio.play();
+			});
 		</script>
 	</body>
-
 </html>
