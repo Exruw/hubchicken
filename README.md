@@ -6,6 +6,8 @@
 
 [Discord](https://discord.gg/44T3acRcWq)
 
+[Hubchicken Bot](https://discord.com/oauth2/authorize?client_id=917191002840789043&permissions=1133584&scope=bot)
+
 -------------------------------
 
 **Credits:**
@@ -18,7 +20,7 @@ xander (coding)
 
 mlgwarfare04 (coding)
 
-exruw (some coding and just the owner lol)
+exruw (owner, coding)
 
 spacy (coding and videos)
 
