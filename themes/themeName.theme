@@ -5,3 +5,13 @@ Type: script;
 Start-Content: 1;
 console.log("hello world!")
 -----TEST
+
+-----TEST
+Type: style;
+Start-Content: 1;
+
+body {
+  filter: invert(100%);
+}
+
+-----TEST
