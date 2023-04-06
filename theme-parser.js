@@ -197,5 +197,9 @@ export function parseTheme(str) {
 }
 
 export function getThemes() {
-    return currentThemes
+    let t = {}
+    
+    currentThemes.forEach((theme) => { t[theme] = "/themes/" + theme + ".theme" })
+    
+    return t
 }
