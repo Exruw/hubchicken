@@ -405,6 +405,7 @@
 
 			let themeCache = JSON.parse(localStorage.getItem("themeCache"))
 			let currentTheme
+			let doLoad = true
 
 			if (!themes[theme]) {
 				if (themeCache[theme]) {
@@ -416,7 +417,6 @@
 
 			if (themeCache[theme]) {
 				let parsed = parseTheme(themeCache[theme])
-				let doLoad = true
 
 				if (typeof parsed === "string") {
 					delete themeCache[theme]
