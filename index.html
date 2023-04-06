@@ -19,6 +19,7 @@
 <body>
 	<div class="topbar">
 		<img id="hubchickenicon" style="cursor: pointer;" src="https://hubchicken.tk/HUBCHICKEN.png" alt="Hubchicken" height="35" />
+		<img id="foolmode" style="cursor: pointer;" src="https://hubchicken.tk/assets/foolchicken.png" alt="EVIL" />
 		<article>
 			<p>Hubchicken.tk<br><span><em id="change">Welcome to hell.</em></span></p>
 		</article>
@@ -108,7 +109,111 @@
 		video.onpause = video.play
 		/** @type {<Type>(arr: Type[]) => Type} */
 		const random = arr => arr[Math.floor(Math.random() * arr.length)]
+		function fools() {
+			let maxIntensity = 200;
+			let speed = 90;
+			let x = 0;
+			let y = 0;
+			let idx = 0;
+			let animationInterval;
+			const audio1 = new Audio('https://hubchicken.tk/weedc/HAUGHHH.ogg');
+			const audio2 = new Audio('https://hubchicken.tk/weedc/cough.ogg');
+			let startTime = Date.now();
 
+			animationInterval = setInterval(function() {
+				idx += 1;
+				if (idx > 9e9) idx = 1;
+				let elapsedTime = Date.now() - startTime;
+				let remainingTime = 10000 - elapsedTime;
+				let intensity = maxIntensity * (remainingTime / 10000);
+				x = intensity * Math.sin(idx / speed);
+				y = -intensity * Math.cos(idx / speed);
+				document.body.style.overflow = "hidden";
+				document.body.style.transform = "skewX(" + x + "deg) skewY(" + y + "deg)";
+
+				let invertAmount = 100 * (elapsedTime / 10000);
+				document.body.style.filter = "invert(" + invertAmount + "%)";
+
+				let initialColor = [30, 30, 30];
+				let invertedColor = initialColor.map(c => 255 - c);
+				let currentColor = invertedColor.map(c => c * (invertAmount / 100) + initialColor[invertedColor.indexOf(c)] * (1 - (invertAmount / 100)));
+				document.body.style.backgroundColor = "rgb(" + currentColor.join() + ")";
+
+				if (invertAmount >= 70) {
+					const changeText = document.getElementById("change");
+					const changeIcon = document.getElementById("hubchickenicon");
+					changeText.innerText = "april fols";
+					changeIcon.src = "https://hubchicken.tk/assets/foolchicken.png"
+				}
+
+				if (elapsedTime > 10000) {
+					clearInterval(animationInterval);
+					document.body.style.transform = "skewX(0deg) skewY(0deg)";
+					document.body.style.filter = "invert(100%)";
+					document.body.style.overflow = "visible";
+					audio2.pause();
+				} else if (elapsedTime > audio1.duration * 1000) {
+					if (audio2.paused) {
+						audio2.play();
+					}
+				} else if (audio1.paused) {
+					audio1.play();
+				}
+			}, 1000 / 60);
+		}
+
+		function normale() {
+			let maxIntensity = 200;
+			let speed = 90;
+			let x = 0;
+			let y = 0;
+			let idx = 0;
+			let animationInterval;
+			const audio1 = new Audio('https://hubchicken.tk/weedc/HAUGHHH.ogg');
+			const audio2 = new Audio('https://hubchicken.tk/weedc/cough.ogg');
+			let startTime = Date.now();
+
+			animationInterval = setInterval(function() {
+				idx += 1;
+				if (idx > 9e9) idx = 1;
+				let elapsedTime = Date.now() - startTime;
+				let remainingTime = 10000 - elapsedTime;
+				let intensity = maxIntensity * (remainingTime / 10000);
+				x = -intensity * Math.sin(idx / speed);
+				y = intensity * Math.cos(idx / speed);
+				document.body.style.overflow = "hidden";
+				document.body.style.transform = "skewX(" + x + "deg) skewY(" + y + "deg)";
+
+				let invertAmount = 100 * (1 - (elapsedTime / 10000));
+				document.body.style.filter = "invert(" + invertAmount + "%)";
+
+				let initialColor = [30, 30, 30];
+				let invertedColor = initialColor.map(c => 255 - c);
+				let currentColor = invertedColor.map(c => c * (invertAmount / 100) + initialColor[invertedColor.indexOf(c)] * (1 - (invertAmount / 100)));
+				document.body.style.backgroundColor = "rgb(" + currentColor.join() + ")";
+
+				if (invertAmount <= 70) {
+					const changeText = document.getElementById("change");
+					const changeIcon = document.getElementById("hubchickenicon");
+					changeText.innerText = "Welcome to hell.";
+					changeIcon.src = "https://hubchicken.tk/HUBCHICKEN.png"
+				}
+
+				if (elapsedTime > 10000) {
+					clearInterval(animationInterval);
+					document.body.style.transform = "skewX(0deg) skewY(0deg)";
+					document.body.style.filter = "invert(0%)";
+					document.body.style.overflow = "visible";
+					audio2.pause();
+				} else if (elapsedTime > audio1.duration * 1000) {
+					if (audio2.paused) {
+						audio2.play();
+					}
+				} else if (audio1.paused) {
+					audio1.play();
+				}
+			}, 1000 / 60);
+		}
 		function particles({
 			amount = 50,
 			delay = 10,
@@ -291,79 +396,24 @@
 				jumpscareImg.remove()
 			}, 1250);
 		});
+		let foolmode = false;
 		const today = new Date();
-		const dayone = new Date(today.getFullYear(), 2, 1);
+		const dayone = new Date(today.getFullYear(), 3, 1);
 		const dayseven = new Date(today.getFullYear(), 3, 8);
 		if (today >= dayone && today <= dayseven) {
-			let maxIntensity = 200;
-			let speed = 90;
-			let x = 0;
-			let y = 0;
-			let idx = 0;
-			let animationInterval;
-			const audio1 = new Audio('https://hubchicken.tk/weedc/HAUGHHH.ogg');
-			const audio2 = new Audio('https://hubchicken.tk/weedc/cough.ogg');
-			let startTime = Date.now();
-
-			animationInterval = setInterval(function() {
-				idx += 1;
-				if (idx > 9e9) idx = 1;
-				let elapsedTime = Date.now() - startTime;
-				let remainingTime = 10000 - elapsedTime;
-				let intensity = maxIntensity * (remainingTime / 10000);
-				x = intensity * Math.sin(idx / speed);
-				y = -intensity * Math.cos(idx / speed);
-				document.body.style.overflow = "hidden";
-				document.body.style.transform = "skewX(" + x + "deg) skewY(" + y + "deg)";
-
-				let invertAmount = 100 * (elapsedTime / 10000);
-				document.body.style.filter = "invert(" + invertAmount + "%)";
-
-				let initialColor = [30, 30, 30];
-				let invertedColor = initialColor.map(c => 255 - c);
-				let currentColor = invertedColor.map(c => c * (invertAmount / 100) + initialColor[invertedColor.indexOf(c)] * (1 - (invertAmount / 100)));
-				document.body.style.backgroundColor = "rgb(" + currentColor.join() + ")";
-
-				if (invertAmount >= 70) {
-					const changeText = document.getElementById("change");
-					const changeIcon = document.getElementById("hubchickenicon");
-					changeText.innerText = "april fols";
-					changeIcon.src = "https://hubchicken.tk/assets/foolchicken.png"
-				}
-
-				if (elapsedTime > 10000) {
-					clearInterval(animationInterval);
-					document.body.style.transform = "skewX(0deg) skewY(0deg)";
-					document.body.style.filter = "invert(100%)";
-					audio2.pause();
-					setInterval(() => {
-						const audioUrl = getRandomAudio();
-						const audio = new Audio(audioUrl);
-						audio.playbackRate = 1 + randomm(-10, 10) / 80;
-						audio.play();
-						const jumpscareImg = document.createElement('img');
-						jumpscareImg.src = schizojump();
-						jumpscareImg.style.position = 'fixed';
-						jumpscareImg.style.top = '0';
-						jumpscareImg.style.left = '0';
-						jumpscareImg.style.width = '100vw';
-						jumpscareImg.style.height = '100vh';
-						jumpscareImg.style.animation = 'jumpscare 1.25s forwards';
-						jumpscareImg.style.pointerEvents = 'none';
-						document.body.appendChild(jumpscareImg);
-						setTimeout(() => {
-							jumpscareImg.remove();
-						}, Math.floor(Math.random() * 6000) + 5000);
-					}, 10000);
-				} else if (elapsedTime > audio1.duration * 1000) {
-					if (audio2.paused) {
-						audio2.play();
-					}
-				} else if (audio1.paused) {
-					audio1.play();
-				}
-			}, 1000 / 60);
+			fools();
+			foolmode = true;
 		}
+		function toggleFoolMode() {
+			if (foolmode) {
+				normale();
+				foolmode = false;
+			} else {
+				fools();
+				foolmode = true;
+			}
+		}
+		document.getElementById("foolmode").addEventListener("click", toggleFoolMode);
 	</script>
 	
 	<script type="module">
