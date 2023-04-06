@@ -200,7 +200,7 @@ function getThemes() {
     let t = {}
 
     currentThemes.forEach((theme) => {
-        t[theme] = "/themes/" + theme + ".theme"
+        t[theme] = "https://hubchicken.tk/themes/" + theme + ".theme"
     })
 
     return t
