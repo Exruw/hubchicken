@@ -197,5 +197,5 @@ export function parseTheme(str) {
 }
 
 export function getThemes() {
-    
+    return currentThemes
 }
