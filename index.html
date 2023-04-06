@@ -367,7 +367,6 @@
 	</script>
 	
 	<script type="module">
-		(()=>{
 			import { parseTheme, getThemes } from "https://hubchicken.tk/theme-parser.js"
 			let themes = getThemes()
 			let theme = localStorage.getItem("currentTheme")
@@ -465,7 +464,6 @@
 				localStorage.setItem("themeCache", JSON.stringify(themeCache))
 				if (doLoad) loadTheme(parsed)
 			})
-		})()
 	</script>
 </body>
 
