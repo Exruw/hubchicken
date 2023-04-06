@@ -47,7 +47,7 @@ class Tokenizer {
     }
 }
 
-export function parseTheme(str) {
+function parseTheme(str) {
     let ast = []
     let token = new Tokenizer(str)
     let currentStr = ""
@@ -196,10 +196,112 @@ export function parseTheme(str) {
     return ast
 }
 
-export function getThemes() {
+function getThemes() {
     let t = {}
-    
-    currentThemes.forEach((theme) => { t[theme] = "/themes/" + theme + ".theme" })
-    
+
+    currentThemes.forEach((theme) => {
+        t[theme] = "/themes/" + theme + ".theme"
+    })
+
     return t
+}
+
+export function initThemes() {
+
+    let themes = getThemes()
+    let theme = localStorage.getItem("currentTheme")
+
+    function loadTheme(parsed) {
+        parsed.forEach((t) => {
+            if (t.type === "closure") {
+                let objType = ""
+                let objContent = ""
+                t.ast.forEach((obj) => {
+                    if (obj.type === "option" && obj.idx.toLowerCase() === "type") {
+                        objType = obj.value.toLowerCase()
+                    }
+                    if (obj.type === "text") objContent += obj.value
+                })
+
+                if (objType === "script") {
+                    let e = document.createElement("script")
+                    e.textContent = objContent
+                    document.head.appendChild(e)
+                }
+
+                if (objType === "style") {
+                    let e = document.createElement("style")
+                    e.textContent = objContent
+                    document.head.appendChild(e)
+                }
+            }
+        })
+    }
+
+    if (!localStorage.getItem("themeCache")) {
+        localStorage.setItem("themeCache", "{}")
+    }
+
+    let themeCache = JSON.parse(localStorage.getItem("themeCache"))
+    let currentTheme
+    let doLoad = true
+
+    if (!themes[theme]) {
+        if (themeCache[theme]) {
+            delete themeCache[theme]
+            localStorage.setItem("themeCache", JSON.stringify(themeCache))
+        }
+        return localStorage.setItem("currentTheme", null)
+    }
+
+    if (themeCache[theme]) {
+        let parsed = themeCache[theme]
+
+        if (typeof parsed === "string") {
+            delete themeCache[theme]
+            localStorage.setItem("themeCache", JSON.stringify(themeCache))
+            console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
+        } else {
+            doLoad = false
+            loadTheme(parsed)
+        }
+
+        fetch(themes[theme]).then(async (response) => {
+            if (!response.ok) return console.error("Failed to get theme '" + theme + "'")
+
+            let text = await response.text()
+            parsed = parseTheme(text)
+
+            if (typeof parsed === "string") return console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
+
+            if (!localStorage.getItem("themeCache")) {
+                localStorage.setItem("themeCache", "{}")
+            }
+
+            themeCache = JSON.parse(localStorage.getItem("themeCache"))
+            themeCache[theme] = parsed
+            localStorage.setItem("themeCache", JSON.stringify(themeCache))
+            if (doLoad) loadTheme(parsed)
+        })
+
+        return
+    }
+
+    fetch(themes[theme]).then(async (response) => {
+        if (!response.ok) return console.error("Failed to get theme '" + theme + "'")
+
+        let text = await response.text()
+        let parsed = parseTheme(text)
+
+        if (typeof parsed === "string") return console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
+
+        if (!localStorage.getItem("themeCache")) {
+            localStorage.setItem("themeCache", "{}")
+        }
+
+        themeCache = JSON.parse(localStorage.getItem("themeCache"))
+        themeCache[theme] = parsed
+        localStorage.setItem("themeCache", JSON.stringify(themeCache))
+        if (doLoad) loadTheme(parsed)
+    })
 }
