@@ -416,7 +416,7 @@
 			}
 
 			if (themeCache[theme]) {
-				let parsed = parseTheme(themeCache[theme])
+				let parsed = themeCache[theme]
 
 				if (typeof parsed === "string") {
 					delete themeCache[theme]
@@ -440,7 +440,7 @@
 					}
 
 					themeCache = JSON.parse(localStorage.getItem("themeCache"))
-					themeCache[theme] = text
+					themeCache[theme] = parsed
 					localStorage.setItem("themeCache", JSON.stringify(themeCache))
 					if (doLoad) loadTheme(parsed)
 				})
@@ -461,7 +461,7 @@
 				}
 
 				themeCache = JSON.parse(localStorage.getItem("themeCache"))
-				themeCache[theme] = text
+				themeCache[theme] = parsed
 				localStorage.setItem("themeCache", JSON.stringify(themeCache))
 				if (doLoad) loadTheme(parsed)
 			})
