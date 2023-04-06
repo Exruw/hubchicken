@@ -1,0 +1,20 @@
+<script>
+  window.addEventListener("message", function (e) {
+    let method = e.data.method
+    let key = e.data.key
+    let value = e.data.value
+    let id = e.data.id
+    
+    if (method === "set") {
+      return window.localStorage.setItem(key, value)
+    }
+    
+    if (method === "get") {
+      e.source.postMessage({
+        value: value,
+        id: id,
+        method: "resp"
+      }, "*")
+    }
+  }, false);
+</script>
