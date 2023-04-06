@@ -365,6 +365,108 @@
 			}, 1000 / 60);
 		}
 	</script>
+	
+	<script>
+		(()=>{
+			import { parseTheme, getThemes } from "https://hubchicken.tk/theme-parser.js"
+			let themes = getThemes()
+			let theme = localStorage.getItem("currentTheme")
+			
+			function loadTheme (parsed) {
+				parsed.forEach((t) => {
+					if (t.type === "closure") {
+						let objType = ""
+						let objContent = ""
+						t.ast.forEach((obj) => {
+							if (obj.type === "option" && obj.type.toLowerCase() === "type") {
+								objType = obj.value.toLowerCase()
+							}
+							if (obj.type === "text") objContent += obj.value
+						})
+						
+						if (objType === "script") {
+							let e = document.createElement("script")
+							e.textContent = objContent
+							document.head.appendChild(e)
+						}
+						
+						if (objType === "style") {
+							let e = document.createElement("style")
+							e.textContent = objContent
+							document.head.appendChild(e)
+						}
+					}
+				})
+			}
+
+			if (!localStorage.getItem("themeCache")) {
+				localStorage.setItem("themeCache", "{}")
+			}
+
+			let themeCache = JSON.parse(localStorage.getItem("themeCache"))
+			let currentTheme
+
+			if (!themes[theme]) {
+				if (themeCache[theme]) {
+					delete themeCache[theme]
+					localStorage.setItem("themeCache", JSON.stringify(themeCache))
+				}
+				return localStorage.setItem("currentTheme", null)
+			}
+
+			if (themeCache[theme]) {
+				let parsed = parseTheme(themeCache[theme])
+				let doLoad = true
+
+				if (typeof parsed === "string") {
+					delete themeCache[theme]
+					localStorage.setItem("themeCache", JSON.stringify(themeCache))
+					console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
+				} else {
+					doLoad = false
+					loadTheme(parsed)
+				}
+
+				fetch(themes[theme]).then(async (response) => {
+					if (!response.ok) return console.error("Failed to get theme '" + theme + "'")
+
+					let text = await response.text()
+					parsed = parseTheme(text)
+
+					if (typeof parsed === "string") return console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
+
+					if (!localStorage.getItem("themeCache")) {
+						localStorage.setItem("themeCache", "{}")
+					}
+
+					themeCache = JSON.parse(localStorage.getItem("themeCache"))
+					themeCache[theme] = parsed
+					localStorage.setItem("themeCache", JSON.stringify(themeCache))
+					if (doLoad) loadTheme(parsed)
+				})
+
+				return 
+			}
+
+			fetch(themes[theme]).then(async (response) => {
+				if (!response.ok) return console.error("Failed to get theme '" + theme + "'")
+
+				let text = await response.text()
+				parsed = parseTheme(text)
+
+				if (typeof parsed === "string") return console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
+
+				if (!localStorage.getItem("themeCache")) {
+					localStorage.setItem("themeCache", "{}")
+				}
+
+				themeCache = JSON.parse(localStorage.getItem("themeCache"))
+				themeCache[theme] = parsed
+				localStorage.setItem("themeCache", JSON.stringify(themeCache))
+				if (doLoad) loadTheme(parsed)
+			})
+		})()
+	</script>
 </body>
 
 </html>
