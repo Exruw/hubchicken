@@ -378,7 +378,7 @@
 						let objType = ""
 						let objContent = ""
 						t.ast.forEach((obj) => {
-							if (obj.type === "option" && obj.type.toLowerCase() === "type") {
+							if (obj.type === "option" && obj.idx.toLowerCase() === "type") {
 								objType = obj.value.toLowerCase()
 							}
 							if (obj.type === "text") objContent += obj.value
