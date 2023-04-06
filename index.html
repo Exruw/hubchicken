@@ -452,7 +452,7 @@
 				if (!response.ok) return console.error("Failed to get theme '" + theme + "'")
 
 				let text = await response.text()
-				parsed = parseTheme(text)
+				let parsed = parseTheme(text)
 
 				if (typeof parsed === "string") return console.error("ThemeParse (theme '" + theme + "'):\n" + parsed)
 
