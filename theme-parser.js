@@ -206,7 +206,7 @@ function getThemes() {
     return t
 }
 
-export function initThemes() {
+function initThemes() {
 
     let themes = getThemes()
     let theme = localStorage.getItem("currentTheme")
@@ -305,3 +305,5 @@ export function initThemes() {
         if (doLoad) loadTheme(parsed)
     })
 }
+
+initThemes()
