@@ -10,7 +10,7 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+  
   for = "/themes/*"
     [headers.values]
-    Access-Control-Allow-Origin = "*"
     Cache-Control = "max-age=604800"
