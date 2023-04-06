@@ -1,3 +1,7 @@
+let currentThemes = [ // ADD YOUR THEMES HERE
+    "themeName"
+]
+
 class Tokenizer {
     constructor(input) {
         this.str = input
@@ -192,3 +196,6 @@ export function parseTheme(str) {
     return ast
 }
 
+export function getThemes() {
+    
+}
