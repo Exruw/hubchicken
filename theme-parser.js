@@ -269,7 +269,7 @@
                 delete themeCache[cached]
                 localStorage.setItem("themeCache", JSON.stringify(themeCache))
                 console.error("ThemeParse (theme '" + newTheme + "'):\n" + cached)
-            } else {
+            } else if (typeof cached === "object") {
                 unloadTheme()
                 loadTheme(cached)
                 return
@@ -294,6 +294,8 @@
                 if (!localStorage.getItem("themeCache")) {
                     localStorage.setItem("themeCache", "{}")
                 }
+                
+                console.log(parsed)
                 
                 themeCache = JSON.parse(localStorage.getItem("themeCache"))
                 themeCache[newTheme] = parsed
