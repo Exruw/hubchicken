@@ -1,12 +1,6 @@
 Boundary: -----TEST;
 
 -----TEST
-Type: script;
-Start-Content: 1;
-console.log("hello world!")
------TEST
-
------TEST
 Type: style;
 Start-Content: 1;
 
