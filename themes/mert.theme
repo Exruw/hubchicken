@@ -1,6 +1,60 @@
 Boundary: ----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed;
 
 ----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
+Type: script;
+Start-Content: 1;
+
+const mert = document.createElement("canvas")
+mert.style = `
+left: 0;
+top: 0;
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+`
+document.body.appendChild(mert)
+
+const ctx = mert.getContext('2d');
+const image = new Image();
+image.src = '/media/mert.png';
+const imageWidth = 50;
+const imageHeight = 50;
+let x = mert.width / 2;
+let y = mert.height / 2;
+let dx = 5;
+let dy = 5;
+
+function drawImage() {
+  ctx.drawImage(image, x, y, imageWidth, imageHeight);
+}
+
+function animate() {
+  ctx.clearRect(0, 0, mert.width, mert.height);
+  drawImage();
+
+  if (x + dx > mert.width - imageWidth || x + dx < 0) {
+	dx = -dx;
+  }
+  if (y + dy > mert.height - imageHeight || y + dy < 0) {
+	dy = -dy;
+  }
+
+  x += dx;
+  y += dy;
+
+  requestAnimationFrame(animate);
+}
+
+image.onload = function() {
+  mert.width = window.innerWidth;
+  mert.height = window.innerHeight;
+  animate();
+}
+
+----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
+
+----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
 Type: style;
 Start-Content: 1;
 
