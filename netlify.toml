@@ -15,13 +15,19 @@
   for = "/themes/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    Cache-Control = "max-age=604800, stale-while-revalidate=60"
+    Cache-Control = "max-age=60, stale-while-revalidate=604800"
     
 [[headers]]
   for = "/theme-parser.js"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    Cache-Control = "max-age=604800, stale-while-revalidate=60"
+    Cache-Control = "max-age=60, stale-while-revalidate=604800"
+    
+[[headers]]
+  for = "/palette.svg"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "max-age=604800"
     
 [[headers]]
   for = "/_cross.html"
