@@ -17,7 +17,7 @@ document.body.appendChild(mert)
 
 const ctx = mert.getContext('2d');
 const image = new Image();
-image.src = '/media/mert.png';
+image.src = 'https://dokso.in/media/mert.png';
 const imageWidth = 50;
 const imageHeight = 50;
 let x = mert.width / 2;
