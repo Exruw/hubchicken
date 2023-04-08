@@ -309,7 +309,11 @@
 
     function loadTopbar() {
         let themes = getThemes()
-
+        
+        let st = document.createElement("style")
+        st.textContent = ".theme { padding: 5px;margin: 0;font-family: Inconsolata;font-weight: 300;font-size: 15px;width: 100%;cursor: pointer;user-select: none;text-decoration: none;color: white;border: none; } .theme:hover {background-color: #212121}"
+        document.head.appendChild(st)
+        
         let themeButtonContainer = document.createElement("div")
         themeButtonContainer.style.right = "20px"
         themeButtonContainer.style.position = "absolute"
