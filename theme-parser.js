@@ -309,7 +309,7 @@
     function loadTopbar() {
         let themes = getThemes()
 
-        let themeButtonContainer = document.createElementById("div")
+        let themeButtonContainer = document.createElement("div")
         themeButtonContainer.style.right = "20px"
         themeButtonContainer.style.position = "absolute"
 
