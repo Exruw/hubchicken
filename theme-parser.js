@@ -329,6 +329,7 @@
         themeButton.style.width = "24px"
         themeButton.style.height = "24px"
         themeButton.style.cursor = "pointer"
+        themeButton.id = "theme"
         themeButtonContainer.appendChild(themeButton)
 
         let themeContainer = document.createElement("div")
