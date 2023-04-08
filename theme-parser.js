@@ -6,8 +6,6 @@
     let topbar = document.getElementById("topbar")
     let currentSet
     let currentElements = []
-
-    console.log(topbar)
     
     class Tokenizer {
         constructor(input) {
