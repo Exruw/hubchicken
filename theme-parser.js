@@ -2,7 +2,8 @@
     let settingTheme = false
     let currentThemes = [ // ADD YOUR THEMES HERE
         "light",
-        "dark"
+        "dark",
+        "mert"
     ]
     let topbar = document.getElementById("topbar")
     let currentSet
