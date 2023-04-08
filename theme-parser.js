@@ -285,6 +285,7 @@
                 let parsed = parseTheme(text)
 
                 if (typeof parsed === "string") {
+                    settingTheme = false
                     alert("Failed to parse theme '" + newTheme + "', read the DevTools console for more info.")
                     return console.error("ThemeParse (theme '" + newTheme + "'):\n" + parsed)
                 }
@@ -292,12 +293,13 @@
                 if (!localStorage.getItem("themeCache")) {
                     localStorage.setItem("themeCache", "{}")
                 }
-
+                
                 themeCache = JSON.parse(localStorage.getItem("themeCache"))
                 themeCache[newTheme] = parsed
                 localStorage.setItem("themeCache", JSON.stringify(themeCache))
                 unloadTheme()
                 loadTheme(parsed)
+                settingTheme = false
             })
         } catch (err) {
             alert("Error while download theme: " + err)
@@ -311,7 +313,6 @@
         let themeButtonContainer = document.createElementById("div")
         themeButtonContainer.style.right = "20px"
         themeButtonContainer.style.position = "absolute"
-        topbar.appendChild(themeButtonContainer)
 
         let themeButton = document.createElement("img")
         themeButton.src = "https://media.discordapp.net/attachments/1064746016491978863/1093410248401891328/cog.png"
@@ -335,6 +336,11 @@
         let themeList = document.createElement("div")
 
         themeContainer.appendChild(themeList)
+        topbar.appendChild(themeButtonContainer)
+
+        function hideThemeContainer() {
+            themeContainer.style.display = "none";
+        }
 
         for (let theme in themes) {
             let themeElement = document.createElement("div");
@@ -368,10 +374,6 @@
                 }
             }
         });
-
-        function hideThemeContainer() {
-            themeContainer.style.display = "none";
-        }
     }
 
     function initThemes() {
