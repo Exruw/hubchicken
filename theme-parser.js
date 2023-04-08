@@ -295,8 +295,6 @@
                     localStorage.setItem("themeCache", "{}")
                 }
                 
-                console.log(parsed)
-                
                 themeCache = JSON.parse(localStorage.getItem("themeCache"))
                 themeCache[newTheme] = parsed
                 localStorage.setItem("themeCache", JSON.stringify(themeCache))
