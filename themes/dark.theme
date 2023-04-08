@@ -1,0 +1,11 @@
+Boundary: -----TEST;
+
+-----TEST
+Type: style;
+Start-Content: 1;
+
+body {
+  filter: invert(0%) !important;
+}
+
+-----TEST
