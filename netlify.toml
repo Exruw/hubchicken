@@ -15,13 +15,13 @@
   for = "/themes/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    Cache-Control = "max-age=604800"
+    Cache-Control = "max-age=604800, stale-while-revalidate=60"
     
 [[headers]]
   for = "/theme-parser.js"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    Cache-Control = "max-age=604800"
+    Cache-Control = "max-age=604800, stale-while-revalidate=60"
     
 [[headers]]
   for = "/_cross.html"
