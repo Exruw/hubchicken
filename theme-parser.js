@@ -1,5 +1,4 @@
-! function() {
-
+!function() {
     let settingTheme = false
     let currentThemes = [ // ADD YOUR THEMES HERE
         "themeName"
@@ -8,6 +7,8 @@
     let currentSet
     let currentElements = []
 
+    console.log(topbar)
+    
     class Tokenizer {
         constructor(input) {
             this.str = input
