@@ -448,9 +448,8 @@
             localStorage.setItem("themeCache", JSON.stringify(themeCache))
             if (doLoad) loadTheme(parsed)
         })
-
-        if (topbar) loadTopbar()
     }
-
+    
     initThemes()
+    if (topbar) loadTopbar()
 }()
