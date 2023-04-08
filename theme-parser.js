@@ -270,6 +270,7 @@
                 localStorage.setItem("themeCache", JSON.stringify(themeCache))
                 console.error("ThemeParse (theme '" + newTheme + "'):\n" + cached)
             } else if (typeof cached === "object") {
+                localStorage.setItem("currentTheme", newTheme)
                 unloadTheme()
                 loadTheme(cached)
                 return
@@ -298,6 +299,7 @@
                 themeCache = JSON.parse(localStorage.getItem("themeCache"))
                 themeCache[newTheme] = parsed
                 localStorage.setItem("themeCache", JSON.stringify(themeCache))
+                localStorage.setItem("currentTheme", newTheme)
                 unloadTheme()
                 loadTheme(parsed)
                 settingTheme = false
