@@ -11,7 +11,7 @@ top: 0;
 position: absolute;
 width: 100%;
 height: 100%;
-z-index: 999;
+z-index: -1;
 `
 document.body.appendChild(mert)
 
