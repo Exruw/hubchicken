@@ -246,6 +246,7 @@
         currentElements.forEach((e) => {
             e.remove()
         })
+        currentElements = []
     }
 
     function setTheme(newTheme) {
@@ -274,7 +275,7 @@
                 return
             }
 
-            fetch(themes[theme]).then(async (response) => {
+            fetch(themes[newTheme]).then(async (response) => {
                 if (!response.ok) {
                     settingTheme = false
                     console.error(response)
