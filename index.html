@@ -342,7 +342,7 @@
 
 		(await (await fetch(`https://api.github.com/repos/Exruw/schizoimages/git/trees/main`)).json()).tree.forEach(v => {
 			if (v?.type !== "tree" && v?.path && tensions[v.path.split(".").pop()])
-				schizoimages.push(`https://phrenic.hubchicken.tk/${encodeURIComponent(v.path)}`);
+				schizoimages.push(`https://phrenicc.hubchicken.tk/${encodeURIComponent(v.path)}`);
 		});
 
 		function schizojump() {
