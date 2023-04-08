@@ -30,6 +30,24 @@
     Cache-Control = "max-age=604800"
     
 [[headers]]
+  for = "/HUBCHICKEN.png"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "max-age=604800"
+    
+[[headers]]
+  for = "/foolchicken.png"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "max-age=604800"
+    
+[[headers]]
+  for = "/style.css"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "max-age=60, stale-while-revalidate=604800"
+    
+[[headers]]
   for = "/_cross.html"
     [headers.values]
     Access-Control-Allow-Origin = "*"
