@@ -323,10 +323,11 @@
         themeButtonContainer.style.position = "absolute"
 
         let themeButton = document.createElement("img")
-        themeButton.src = "https://media.discordapp.net/attachments/1064746016491978863/1093410248401891328/cog.png"
+        themeButton.src = "/palette.png"
         themeButton.style.filter = "invert(90%)"
         themeButton.style.display = "inline-block"
         themeButton.style.width = "24px"
+        themeButton.style.height = "24px"
         themeButton.style.cursor = "pointer"
         themeButtonContainer.appendChild(themeButton)
 
