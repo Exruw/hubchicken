@@ -5,6 +5,7 @@ Type: style;
 Start-Content: 1;
 
 body {
+  background-color: #1e1e1e;
   filter: invert(0%) !important;
 }
 
