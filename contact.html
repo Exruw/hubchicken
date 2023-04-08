@@ -25,13 +25,17 @@
 			}
 
 			.topbar {
-				display: inline-block;
 				width: 100%;
 				min-width: 320px;
 				margin: 0;
 				background-color: #262626;
 				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 				margin-bottom: 20px;
+				display: flex;
+				justify-content: center;
+			        align-items: center;
+			        gap: 1ch;
+			        flex-direction: row;
 			}
 
 			.topbar p {
@@ -118,7 +122,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="topbar">
+		<div class="topbar" id="topbar">
 			<p>
 				Contact Page<br /><a href="https://hubchicken.tk/">Go Back</a>
 			</p>
