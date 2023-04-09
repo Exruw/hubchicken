@@ -58,7 +58,7 @@ hr {
 }
 
 .content-container {
-	margin: 70px auto 20px;
+	margin: 40px auto 20px;
 	max-width: 800px;
 	background-color: #40444b;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
