@@ -3,6 +3,7 @@
     let currentThemes = [ // ADD YOUR THEMES HERE
         "light",
         "dark",
+        "discord",
         "mert"
     ]
     let topbar = document.getElementById("topbar")
