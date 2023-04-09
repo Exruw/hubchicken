@@ -62,7 +62,7 @@ hr {
 	max-width: 800px;
 	background-color: #40444b;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-	padding: 20px;
+	padding: 16px;
 	border-radius: 5px;
 }
 
