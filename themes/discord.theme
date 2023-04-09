@@ -1,6 +1,18 @@
-Boundary: -----!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed;
+Boundary: ----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed;
 
------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
+----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
+Type: script;
+Start-Content: 1;
+
+document.getElementById("change").innerText = ""
+const foolModeImg = document.getElementById("foolmode");
+if (foolModeImg) {
+  foolModeImg.remove();
+}
+
+----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
+
+----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
 Type: style;
 Start-Content: 1;
 
@@ -134,15 +146,4 @@ footer p {
 	user-select: none;
 }
 
-#foolmode {
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	cursor: pointer;
-	opacity: 20%;
-	transition: opacity ease-in-out 0.25s;
-}
-
------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
+----------!f2fd6af39c56dd5a193b83754ddeaa440e10ece8fbb0797b25c4eaa5f7f5ca3beae116a47c948b562769f0b3a1aca9f1e7c8d16a1dd65efe1df5935205e560ed
