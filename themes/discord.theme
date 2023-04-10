@@ -18,7 +18,7 @@ hr {
 	border: 1px solid white;
 }
 
-#change {
+#change, #foolmode {
 	display: none
 }
 
