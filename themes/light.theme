@@ -6,6 +6,7 @@ Start-Content: 1;
 
 body {
   filter: invert(100%) !important;
+  background-color: #FFFFFF;
 }
 
 -----TEST
