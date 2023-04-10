@@ -4,7 +4,8 @@
         "light",
         "dark",
         "discord",
-        "mert"
+        "mert",
+        "im shakng and crieing"
     ]
     let topbar = document.getElementById("topbar")
     let currentSet
