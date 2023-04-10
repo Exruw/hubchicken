@@ -199,6 +199,28 @@ footer p {
 	opacity: 100%;
 }
 
+.hubchicken {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	background-image: url('https://hubchicken.tk/HUBCHICKEN.png');
+	background-size: contain;
+	opacity: 0.4;
+	transition: top 10s linear, left 10s linear;
+	z-index: -1;
+}
+
+#banner-images {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 600px;
+	max-height: 600px;
+	width: 39%;
+}
+
 video::-webkit-media-controls-play-button {display: none}
 video::-webkit-media-controls-timeline {display: none}
 video::-webkit-media-controls-current-time-display {display: none}
