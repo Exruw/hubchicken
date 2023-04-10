@@ -27,7 +27,7 @@
 			transition: top 10s linear, left 10s linear;
 			z-index: -1;
 			}
-			img {
+			#fart {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
@@ -134,5 +134,5 @@
 			if (v?.type !== "tree" && v?.path && extensions[v.path.split(".").pop()])
 			images.push(`https://cdn.hubchicken.tk/${encodeURIComponent(v.path)}`);
 		});
-	$('<img class="fade-in" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');		
+	$('<img class="fade-in" id="fart" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');		
 	</script>
