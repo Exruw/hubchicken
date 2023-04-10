@@ -1,0 +1,43 @@
+Boundary: -----TEST;
+
+-----TEST
+Type: style;
+Start-Content: 1;
+
+@keyframes woop {
+        from {
+            transform: skew(0);
+       }
+        
+        to {
+            transform: skew(-150deg, -150deg);
+        }
+    }
+    
+    div {
+        animation: woop 500s linear infinite;
+        max-width: 20%;
+       background-color: #FFFFFF !important 
+    }
+    
+    * {
+        filter: grayscale(100%);
+    }
+    
+    *:after {
+        color: #000000 !important;
+        content: ":(" !important;
+    }
+    
+    body {
+        background: url(https://cdn.discordapp.com/attachments/1083625413101748304/1094781070609747968/wompwomp.png)
+    }
+
+
+    #hubchickenicon {
+        animation: woop 10s linear infinite;
+        animation-direction: alternate;
+        content: url(https://cdn.discordapp.com/attachments/1083625413101748304/1094781070861402142/womp.png)
+    }
+
+-----TEST
