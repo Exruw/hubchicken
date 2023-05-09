@@ -326,7 +326,7 @@
         themeButtonContainer.style.position = "absolute"
 
         let themeButton = document.createElement("img")
-        themeButton.src = "/palette.svg"
+        themeButton.src = "https://hubchicken.tk/palette.svg"
         themeButton.style.filter = "invert(90%)"
         themeButton.style.display = "inline-block"
         themeButton.style.width = "24px"
