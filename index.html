@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -362,10 +363,10 @@
 			"mp3": true,
 			"ogg": true
 		};
-		(await (await fetch(`https://api.github.com/repos/Exruw/hubcdn/git/trees/${(await (await fetch("https://api.github.com/repos/Exruw/hubcdn/commits")).json())[0]?.commit?.tree?.sha}`)).json()).tree.forEach(v => {
-			if (v?.type !== "tree" && v?.path && extensions[v.path.split(".").pop()])
-				audiolist.push(`https://cdn.hubchicken.tk/${encodeURIComponent(v.path)}`);
-		});
+		let audiofiles = await fetch(`https://cdn.hubchicken.tk/audio-array.json`)
+		audiofiles = await audiofiles.json()
+
+		for (const [file, url] of Object.entries(audiofiles)) audiolist.push(url)
 
 		function getRandomAudio() {
 			const randomIndex = Math.floor(Math.random() * audiolist.length);
@@ -416,6 +417,4 @@
 		}
 		document.getElementById("foolmode").addEventListener("click", toggleFoolMode);
 	</script>
-</body>
-
 </html>
