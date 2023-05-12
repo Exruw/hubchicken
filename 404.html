@@ -130,9 +130,9 @@
         
 		const images = [];
 		const extensions = {"gif": true, "png": true, "jpg": true, "jpeg": true};
-		(await (await fetch(`https://api.github.com/repos/Exruw/hubcdn/git/trees/${(await (await fetch("https://api.github.com/repos/Exruw/hubcdn/commits")).json())[0]?.commit?.tree?.sha}`)).json()).tree.forEach(v => {
-			if (v?.type !== "tree" && v?.path && extensions[v.path.split(".").pop()])
-			images.push(`https://cdn.hubchicken.tk/${encodeURIComponent(v.path)}`);
-		});
+		let files = await fetch(`https://cdn.hubchicken.tk/image-array.json`)
+		files = await files.json()
+
+		for (const [file, url] of Object.entries(files)) images.push(url)
 	$('<img class="fade-in" id="fart" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');		
 	</script>
