@@ -89,7 +89,7 @@ hr {
 	font-family: "Share Tech Mono", monospace;
 }
 .content-container #comment{
-	color:gray
+	color: rgb(var(--rgb-highlighter), 40%);
 }
 .content-container p {
 	font-family: "Share Tech Mono", monospace;
