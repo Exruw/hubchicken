@@ -6,6 +6,7 @@
         "discord",
         "mert",
         "roblox",
+        "terminal",
         "im shakng and crieing"
     ]
     let topbar = document.getElementById("topbar")
