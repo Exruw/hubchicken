@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://hubchicken.tk" />
 	<meta property="og:image" content="https://hubchicken.tk/HUBCHICKEN.png" />
-	<meta property="og:description" content="Everytime you click the button, a new video appears!" />
+	<meta property="og:description" content="Every time you click the button, a new video appears!" />
 	<meta name="theme-color" content="#0D69AB">
 	<title>Random Videos</title>
 	<link rel="stylesheet" href="https://hubchicken.tk/style.css">
@@ -50,67 +49,105 @@
 		}
 	</script>
 	<script type="module">
-		import { getArray, getRandomVideo } from "https://hubchicken.tk/video-array.js"
-		/*
-			MASSIVE PROBLEM:
-			- Videos do not work on mobile
-			- I do not know why
-			- If anyone can research this, please fix
-			
-			Solution: Mobile sucks dick lmao
-			NOTE: IF YOU WANT TO ADD VIDEOS, GO TO video-array.js
-		*/
+        import { getArray, getRandomVideo } from "https://hubchicken.tk/video-array.js"
 
 		var video = document.getElementById("video");
 		var videoSource = document.getElementById("video-source");
 		var videoButton = document.getElementById("video-button");
 		var videoLink = document.getElementById("video-link");
-		var automode = document.getElementById("automode")
-		var automodebool = automode.checked
-		console.log(automodebool)
-		let randomItem = null;
+		var automode = document.getElementById("automode");
+		var automodebool = automode.checked;
+		let history = [];
+		let indexitem = -1;
 
 		function formatText(text) {
 			let formatted = text.split("https://videos.hubchicken.tk/");
 			if (formatted[1])
-				// fuk u if you have a file extension twice
 				return formatted[1].replace(".mp4", "").replace(".webm", "").replace(".mov", "").replace(".3gpp", "").replaceAll("_", " ").replaceAll("-", " ");
 			else
 				return text;
 		}
 
-		function loadVideo() {
-			videoSource.src = randomItem;
+		function loadVideo(url) {
+			videoSource.src = url;
 			videoSource.type = "video/ogg";
 			video.autoplay = true;
 			video.load();
 		}
 
 		function addVideo() {
-			randomItem = getRandomVideo();
+			const randomItem = getRandomVideo();
+			history.push(randomItem);
+			indexitem = history.length - 1;
 			videoLink.textContent = formatText(randomItem);
 			videoLink.href = randomItem;
-			loadVideo();
+			loadVideo(randomItem);
+		}
+
+		function backward() {
+			if (indexitem > 0) {
+				indexitem--;
+				const prev = history[indexitem];
+				videoLink.textContent = formatText(prev);
+				videoLink.href = prev;
+				loadVideo(prev);
+			}
+		}
+
+		function forward() {
+			if (indexitem < history.length - 1) {
+				indexitem++;
+				const next = history[indexitem];
+				videoLink.textContent = formatText(next);
+				videoLink.href = next;
+				loadVideo(next);
+			} else {
+				addVideo();
+			}
 		}
 
 		function automodehandler() {
 			if (automodebool == true) {
-				addVideo()
+				addVideo();
 			} else {
-				loadVideo()
+				loadVideo(history[indexitem]);
 			}
 		}
 
 		function changeboolAM() {
-			automodebool = automode.checked
-			console.log(automodebool)
+			automodebool = automode.checked;
 		}
-		automode.addEventListener("click", changeboolAM)
+
+		automode.addEventListener("click", changeboolAM);
 		video.addEventListener("ended", automodehandler, false);
 		videoButton.addEventListener("click", addVideo);
-		video.onpause = video.play
+		video.onpause = video.play;
+
+		video.addEventListener("click", function() {
+			if (video.requestFullscreen) {
+				video.requestFullscreen();
+			} else if (video.mozRequestFullScreen) {
+				video.mozRequestFullScreen();
+			} else if (video.webkitRequestFullscreen) {
+				video.webkitRequestFullscreen();
+			} else if (video.msRequestFullscreen) {
+				video.msRequestFullscreen();
+			}
+		});
+
+		document.addEventListener("keydown", function(event) {
+				if (event.key === "ArrowRight" || event.key === "d") {
+					event.preventDefault();
+					forward();
+				} else if (event.key === "ArrowLeft" || event.key === "a") {
+					event.preventDefault();
+					backward();
+				}
+		});
+
 		/** @type {<Type>(arr: Type[]) => Type} */
-		const random = arr => arr[Math.floor(Math.random() * arr.length)]
+		const random = arr => arr[Math.floor(Math.random() * arr.length)];
+
 		function fools() {
 			let maxIntensity = 200;
 			let speed = 90;
@@ -216,6 +253,7 @@
 				}
 			}, 1000 / 60);
 		}
+
 		function particles({
 			amount = 50,
 			delay = 10,
@@ -235,15 +273,15 @@
 			pos: [x, y] = ['0%', '100%']
 		}) {
 			for (const i of Array(amount).keys()) {
-				const img = new Image(150, 150)
-				img.src = random(photos)
+				const img = new Image(150, 150);
+				img.src = random(photos);
 				img.style = `
 					position: fixed;
 					transform-origin: center center;
 					object-fit: contain;
-					`
-				img.ariaHidden = 'true'
-				document.body.appendChild(img)
+					`;
+				img.ariaHidden = 'true';
+				document.body.appendChild(img);
 				img.animate([{
 					opacity: 0
 				}, {
@@ -252,7 +290,7 @@
 					delay: i * delay,
 					duration: 100,
 					fill: 'both'
-				})
+				});
 				img
 					.animate(
 						[{
@@ -273,38 +311,38 @@
 						}
 					)
 					.addEventListener('finish', () => {
-						img.remove()
-					})
+						img.remove();
+					});
 			}
 		}
 
 
 		/** @param {string} text @param {HTMLElement} [paragraph] */
 		function say(text, paragraph) {
-			const voice = random(speechSynthesis.getVoices().filter(voice => voice.lang.startsWith('en-')))
-			let handle
+			const voice = random(speechSynthesis.getVoices().filter(voice => voice.lang.startsWith('en-')));
+			let handle;
 			return new Promise((resolve) => {
 				function check() {
 					if (speechSynthesis.speaking) {
-						handle = requestAnimationFrame(check)
+						handle = requestAnimationFrame(check);
 					} else {
-						cancelAnimationFrame(handle)
-						resolve()
+						cancelAnimationFrame(handle);
+						resolve();
 					}
 				}
-				const utter = new SpeechSynthesisUtterance(text)
-				utter.voice = voice
+				const utter = new SpeechSynthesisUtterance(text);
+				utter.voice = voice;
 				if (paragraph) {
-					paragraph.innerText = ""
+					paragraph.innerText = "";
 				}
 				utter.addEventListener('boundary', function(event) {
 					if (paragraph) {
-						paragraph.innerText = text.substring(0, event.charIndex + event.charLength)
+						paragraph.innerText = text.substring(0, event.charIndex + event.charLength);
 					}
 				});
-				speechSynthesis.speak(utter)
-				check()
-			})
+				speechSynthesis.speak(utter);
+				check();
+			});
 		}
 
 		const moller = [
@@ -318,23 +356,23 @@
 			'molge',
 			'begging',
 			'standing'
-		].map((a) => `./molly/${a}.png`)
+		].map((a) => `./molly/${a}.png`);
 		// Hide context menu
 		document.body.addEventListener('contextmenu', event => {
-			event.preventDefault()
+			event.preventDefault();
 			if (event.target?.id !== 'video-link') {
-				new Audio('https://www.myinstants.com/media/sounds/vine-boom.mp3').play()
+				new Audio('https://www.myinstants.com/media/sounds/vine-boom.mp3').play();
 
 				particles({
 					pos: [event.pageX + 'px', event.pageY + 'px'],
 					duration: 300,
 					delay: 1
-				})
+				});
 			} else {
-				navigator.clipboard.writeText(videoLink.href)
-				say("Copied to clipboard.")
+				navigator.clipboard.writeText(videoLink.href);
+				say("Copied to clipboard.");
 			}
-		})
+		});
 		// Random image 
 		const tensions = {
 			"png": true
@@ -406,6 +444,7 @@
 			fools();
 			foolmode = true;
 		}
+
 		function toggleFoolMode() {
 			if (foolmode) {
 				normale();
