@@ -15,11 +15,52 @@
 	<title>Random Videos</title>
 	<link rel="stylesheet" href="https://hubchicken.tk/style.css">
 </head>
+<style>
+.hub-container {
+	display: none;
+	margin: auto;
+	width: 50%;
+	word-wrap: break-word;
+	background-color: #262626;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 10px;
+	margin-bottom: 20px;
+	color:white;
+	font-family: Inconsolata;
+	resize: both;
+	overflow: auto;
+    min-width: 50%;
+    max-width: 95%;
+    min-height: 256px
+}
 
+.hub-container p {
+	font-family: Inconsolata;
+	font-weight: 300;
+	font-size: 15px;
+	color: white;
+	user-select: none;
+	padding: 2px 0;
+	margin: 0;
+}
+
+::-webkit-scrollbar {
+	width: 5px; 
+	background-color: #262626
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #262626;
+}
+
+</style>
 <body>
 	<div id="topbar" class="topbar">
 		<img id="hubchickenicon" style="cursor: pointer;" src="https://hubchicken.tk/HUBCHICKEN.png" alt="Hubchicken" height="35" />
 		<img id="foolmode" style="cursor: pointer;" src="https://hubchicken.tk/assets/foolchicken.png" alt="EVIL" />
+        <div style="right: 55px; position: absolute;"><img src="https://cdn.hubchicken.tk/hubchicken3.png" id="hubbutton" style="display: inline-block; width: 24px; height: 24px; cursor: pointer;"></div>
 		<article>
 			<p>Hubchicken.tk<br><span><em id="change">Welcome to hell.</em></span></p>
 		</article>
@@ -33,6 +74,8 @@
 		<input type="button" value="Click this to load a random video" id="video-button">
 		<p><input type="checkbox" id="automode"> Automatic Mode <b id="comment"> / this will play a new video once the video finishes</b></p>
 	</div>
+  <div class="hub-container" id="hubContainer">
+  </div>
 	<div id="links" class="content-container">
 		<p>Links:</p>
 		<hr>
@@ -41,6 +84,14 @@
 		<!--<a href="request">Request a Video</a>-->
 		</h1>
 	</div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.147.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/"
+        }
+      }
+    </script>
 	<script>
 		const d = new Date();
 		var month = d.getMonth();
@@ -49,15 +100,18 @@
 		}
 	</script>
 	<script type="module">
-        import { getArray, getRandomVideo } from "https://hubchicken.tk/video-array.js"
+		import { getArray, getRandomVideo } from "https://hubchicken.tk/video-array.js"
 
 		var video = document.getElementById("video");
 		var videoSource = document.getElementById("video-source");
 		var videoButton = document.getElementById("video-button");
 		var videoLink = document.getElementById("video-link");
+		var hubButton = document.getElementById("hubbutton");
+		var hubContainer = document.getElementById("hubContainer");
 		var automode = document.getElementById("automode");
 		var automodebool = automode.checked;
 		let history = [];
+		let counter = localStorage.getItem('vcounter');
 		let indexitem = -1;
 
 		function formatText(text) {
@@ -68,6 +122,12 @@
 				return text;
 		}
 
+		if (!counter) {
+			counter = 0;
+		} else {
+			counter = parseInt(counter);
+		}
+
 		function loadVideo(url) {
 			videoSource.src = url;
 			videoSource.type = "video/ogg";
@@ -76,10 +136,12 @@
 		}
 
 		function addVideo() {
+			counter++;
+			localStorage.setItem('vcounter', counter);
 			const randomItem = getRandomVideo();
 			history.push(randomItem);
 			indexitem = history.length - 1;
-			videoLink.textContent = formatText(randomItem);
+			videoLink.textContent = formatText(randomItem) + " (#" + counter + ")";
 			videoLink.href = randomItem;
 			loadVideo(randomItem);
 		}
@@ -143,6 +205,15 @@
 					event.preventDefault();
 					backward();
 				}
+		});
+        
+
+		hubButton.addEventListener("click", function () {
+			if (hubContainer.style.display === "none") {
+				hubContainer.style.display = "block";
+			} else {
+				hubContainer.style.display = "none";
+			}
 		});
 
 		/** @type {<Type>(arr: Type[]) => Type} */
@@ -456,4 +527,6 @@
 		}
 		document.getElementById("foolmode").addEventListener("click", toggleFoolMode);
 	</script>
+    <script type="module">import*as THREE from"https://unpkg.com/three@0.147.0/build/three.module.js";import{OBJLoader}from"https://unpkg.com/three@0.147.0/examples/jsm/loaders/OBJLoader.js";import{MTLLoader}from"https://unpkg.com/three@0.147.0/examples/jsm/loaders/MTLLoader.js";var fps2=document.getElementById("FPS"),msgb=document.getElementById("message"),messageList=document.getElementById("msgbox");const imageLoader=new THREE.ImageLoader,scene=new THREE.Scene,camera=new THREE.PerspectiveCamera(90,window.innerWidth/window.innerHeight,.1,1e3),renderer=new THREE.WebGLRenderer({antialias:!0});renderer.shadowMap.enabled=!0,renderer.shadowMap.type=THREE.PCFSoftShadowMap;function componentToHex(a){var b=a.toString(16);return 1==b.length?"0"+b:b}function rgbToHex(a,c,d){return"#"+componentToHex(a)+componentToHex(c)+componentToHex(d)}renderer.domElement.style.position="absolute",renderer.domElement.style.left="0",renderer.domElement.style.top="0";var job=document.getElementById("yesinput"),button=document.getElementById("butt");camera.position.z=5,renderer.render(scene,camera);var hemiLight=new THREE.HemisphereLight(16777215,16777215,.6);hemiLight.color.setHSL(60,60,31),hemiLight.groundColor.setHSL(950,33,38),hemiLight.position.set(0,500,0),scene.add(hemiLight);var dirLight=new THREE.DirectionalLight(16777215,1.4);dirLight.position.set(-1,.75,1),dirLight.position.multiplyScalar(50),dirLight.name="dirlight",scene.add(dirLight),dirLight.castShadow=!0,dirLight.shadow.mapSize.width=dirLight.shadow.mapSize.height=2048;let d=300;dirLight.shadow.camera.left=-300,dirLight.shadow.camera.right=300,dirLight.shadow.camera.top=300,dirLight.shadow.camera.bottom=-300,dirLight.shadow.camera.far=3500,dirLight.shadow.bias=-1e-4;let sizeX=512,sizeY=512;camera.aspect=sizeX/sizeY,camera.updateProjectionMatrix(),renderer.setSize(sizeX,sizeY);function onResize(){camera.aspect=sizeX/sizeY,camera.updateProjectionMatrix(),renderer.setSize(sizeX,sizeY),renderer.domElement.style.height="100%",renderer.domElement.style.width="100%"}let mtlLoader=new MTLLoader,objLoader=new OBJLoader;mtlLoader.load("https://r-2283.vercel.app/cdn/hubchicken.mtl",a=>{a.preload(),objLoader.setMaterials(a),objLoader.load("https://r-2283.vercel.app/cdn/hubchicken.obj",a=>{function b(){if(g&&h){let a=renderer.domElement.getBoundingClientRect();m&&(m.width!==a.width||m.height!==a.height)&&(sizeX=a.width,sizeY=a.height,onResize(),p=!0),i={x:6*((d-g)/a.width),y:3.5*((e-h)/a.height)},m=a}g=d,h=e,l=!0,j&&f===renderer.domElement&&i&&(k.x=i.x,k.y=i.y,l=!1),l&&(k.x/=1.1,k.y/=1.5),a.rotation.x=Math.max(-1.5,Math.min(1.5,a.rotation.x+k.y)),a.rotation.y+=k.x,(n!==a.rotation.x||o!==a.rotation.y||p)&&renderer.render(scene,camera),n=a.rotation.x,o=a.rotation.y,p=!1,requestAnimationFrame(b)}a.updateMatrixWorld(),scene.add(a);let c,d,e,f,g,h,i,j=!1,k={x:0,y:0},l=!1,m=renderer.domElement.getBoundingClientRect(),n=a.rotation.x,o=a.rotation.y,p=!1;renderer.setClearColor(0,0),requestAnimationFrame(b),a.rotation.x=.3,a.rotation.y=-.3,document.onmousedown=function(){f=event.target,j=!0},document.onmouseup=function(){j=!1},document.addEventListener("wheel",function(){if(event.target===renderer.domElement)return camera.position.z=Math.min(5,Math.max(2,camera.position.z+event.deltaY/100/3)),p=!0,event.preventDefault(!0)},{passive:!1}),document.onmousemove=function(){d=event.clientX,e=event.clientY,c=new THREE.Vector3}})}),renderer.domElement.style.height="100%",renderer.domElement.style.width="100%",renderer.domElement.style.position="relative",document.getElementById("hubContainer").appendChild(renderer.domElement);
+    </script>
 </html>
