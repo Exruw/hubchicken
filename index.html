@@ -137,7 +137,7 @@
 					v.style.top = "0px"
 					v.style.width = "1px"
 					v.style.height = "1px"
-					document.appendChild(v)
+					document.body.appendChild(v)
 					vidQueue.push({ obj: v, url: nVideo })
 				}
 
@@ -154,7 +154,7 @@
 			v.style.top = "0px"
 			v.style.width = "1px"
 			v.style.height = "1px"
-			document.appendChild(v)
+			document.body.appendChild(v)
 			vidQueue.push({ obj: v, url: nVideo })
 			video.obj.remove()
 			return video.url
