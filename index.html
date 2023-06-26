@@ -99,6 +99,7 @@
 		var automode = document.getElementById("automode");
 		var automodebool = automode.checked;
 		let history = [];
+		let vidQueue = []
 		let counter = localStorage.getItem('vcounter');
 		let indexitem = -1;
 
@@ -123,10 +124,26 @@
 			video.load();
 		}
 
+		function getNextVideo() {
+			if (vidQueue.length === 0) {
+				for (let i = 0; i++; i < 5) {
+					let nVideo = getRandomVideo()
+					new Audio(nVideo)
+					vidQueue.push(nVideo)
+				}
+
+				return vidQueue[0]
+			}
+			let nVideo = getRandomVideo()
+			new Audio(nVideo)
+			vidQueue.push(nVideo)
+			return vidQueue.shift()
+		}
+
 		function addVideo() {
 			counter++;
 			localStorage.setItem('vcounter', counter);
-			const randomItem = getRandomVideo();
+			const randomItem = getNextVideo();
 			history.push(randomItem);
 			indexitem = history.length - 1;
 			videoLink.textContent = formatText(randomItem) + " (#" + counter + ")";
