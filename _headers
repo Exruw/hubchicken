@@ -1,0 +1,30 @@
+/*
+    Access-Control-Allow-Origin: *
+    
+/themes/*
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=60, stale-while-revalidate=604800
+    
+/theme-parser.js"
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=60, stale-while-revalidate=604800
+    
+/palette.svg
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=604800
+    
+/HUBCHICKEN.png
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=604800
+    
+/foolchicken.png
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=604800
+    
+/style.css
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=60, stale-while-revalidate=604800
+    
+/_cross.html
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=604800
