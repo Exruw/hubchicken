@@ -131,33 +131,17 @@
 					let v = document.createElement("video")
 					v.src = nVideo
 					v.preload = "auto"
-					v.style.opacity = 0
-					v.style.position = "absolute"
-					v.style.left = "0px"
-					v.style.top = "0px"
-					v.style.width = "1px"
-					v.style.height = "1px"
-					document.body.appendChild(v)
-					vidQueue.push({ obj: v, url: nVideo })
+					vidQueue.push(nVideo)
 				}
 
-				return vidQueue[0].url
+				return vidQueue[0]
 			}
 			let nVideo = getRandomVideo()
-			let video = vidQueue.shift()
 			let v = document.createElement("video")
 			v.src = nVideo
 			v.preload = "auto"
-			v.style.opacity = 0
-			v.style.position = "absolute"
-			v.style.left = "0px"
-			v.style.top = "0px"
-			v.style.width = "1px"
-			v.style.height = "1px"
-			document.body.appendChild(v)
-			vidQueue.push({ obj: v, url: nVideo })
-			video.obj.remove()
-			return video.url
+			vidQueue.push(nVideo)
+			return vidQueue.shift()
 		}
 
 		function addVideo() {
