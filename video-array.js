@@ -6,7 +6,7 @@ const extensions = {"mp4": true, "mov": true, "webm": true, "3gpp": true};
         videoArray.push(`https://videos.hubchicken.tk/${encodeURIComponent(v.path)}`);
 });*/
 
-let files = await fetch(`https://videos.hubchicken.tk/video-array.json`)
+let files = await fetch(`https://hubvideos.pages.dev/video-array.json`)
 files = await files.json()
 
 for (const [file, url] of Object.entries(files)) videoArray.push(url)
