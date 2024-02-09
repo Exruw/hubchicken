@@ -8,12 +8,12 @@
 	<meta property="og:site_name" content="Hubchicken" />
 	<meta property="og:title" content="Random Videos" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://hubchicken.tk" />
-	<meta property="og:image" content="https://hubchicken.tk/HUBCHICKEN.png" />
+	<meta property="og:url" content="https://hubchicken.pages.dev" />
+	<meta property="og:image" content="https://hubchicken.pages.dev/HUBCHICKEN.png" />
 	<meta property="og:description" content="Every time you click the button, a new video appears!" />
 	<meta name="theme-color" content="#0D69AB">
 	<title>Random Videos</title>
-	<link rel="stylesheet" href="https://hubchicken.tk/style.css">
+	<link rel="stylesheet" href="https://hubchicken.pages.dev/style.css">
 </head>
 <style>
 .hub-container {
@@ -46,11 +46,11 @@
 </style>
 <body>
 	<div id="topbar" class="topbar">
-		<img id="hubchickenicon" style="cursor: pointer;" src="https://hubchicken.tk/HUBCHICKEN.png" alt="Hubchicken" height="35" />
-		<img id="foolmode" style="cursor: pointer;" src="https://hubchicken.tk/assets/foolchicken.png" alt="EVIL" />
-        <div style="right: 55px; position: absolute;"><img src="https://cdn.hubchicken.tk/hubchicken3.png" id="hubbutton" style="display: inline-block; width: 24px; height: 24px; cursor: pointer;"></div>
+		<img id="hubchickenicon" style="cursor: pointer;" src="https://hubchicken.pages.dev/HUBCHICKEN.png" alt="Hubchicken" height="35" />
+		<img id="foolmode" style="cursor: pointer;" src="https://hubchicken.pages.dev/assets/foolchicken.png" alt="EVIL" />
+        <div style="right: 55px; position: absolute;"><img src="https://hubcdn.pages.dev/hubchicken3.png" id="hubbutton" style="display: inline-block; width: 24px; height: 24px; cursor: pointer;"></div>
 		<article>
-			<p>Hubchicken.tk<br><span><em id="change">Welcome to hell.</em></span></p>
+			<p>Hubchicken<br><span><em id="change">Welcome to hell.</em></span></p>
 		</article>
 	</div>
 	<script src="/theme-parser.js"></script>
@@ -68,7 +68,7 @@
 		<p>Links:</p>
 		<hr>
 		<a href="contact">Contacts</a>
-		<a href="https://videos.hubchicken.tk/">List of Videos</a>
+		<a href="https://hubvideos.pages.dev/">List of Videos</a>
 		<!--<a href="request">Request a Video</a>-->
 		</h1>
 	</div>
@@ -88,7 +88,7 @@
 		}
 	</script>
 	<script type="module">
-		import { getArray, getRandomVideo } from "https://hubchicken.tk/video-array.js"
+		import { getArray, getRandomVideo } from "https://hubchicken.pages.dev/video-array.js"
 
 		var video = document.getElementById("video");
 		var videoSource = document.getElementById("video-source");
@@ -104,7 +104,7 @@
 		let indexitem = -1;
 
 		function formatText(text) {
-			let formatted = text.split("https://videos.hubchicken.tk/");
+			let formatted = text.split("https://hubvideos.pages.dev/");
 			if (formatted[1])
 				return formatted[1].replace(".mp4", "").replace(".webm", "").replace(".mov", "").replace(".3gpp", "").replaceAll("_", " ").replaceAll("-", " ");
 			else
@@ -235,8 +235,8 @@
 			let y = 0;
 			let idx = 0;
 			let animationInterval;
-			const audio1 = new Audio('https://hubchicken.tk/weedc/HAUGHHH.ogg');
-			const audio2 = new Audio('https://hubchicken.tk/weedc/cough.ogg');
+			const audio1 = new Audio('https://hubchicken.pages.dev/weedc/HAUGHHH.ogg');
+			const audio2 = new Audio('https://hubchicken.pages.dev/weedc/cough.ogg');
 			let startTime = Date.now();
 
 			animationInterval = setInterval(function() {
@@ -262,7 +262,7 @@
 					const changeText = document.getElementById("change");
 					const changeIcon = document.getElementById("hubchickenicon");
 					changeText.innerText = "april fols";
-					changeIcon.src = "https://hubchicken.tk/assets/foolchicken.png"
+					changeIcon.src = "https://hubchicken.pages.dev/assets/foolchicken.png"
 				}
 
 				if (elapsedTime > 10000) {
@@ -288,8 +288,8 @@
 			let y = 0;
 			let idx = 0;
 			let animationInterval;
-			const audio1 = new Audio('https://hubchicken.tk/weedc/HAUGHHH.ogg');
-			const audio2 = new Audio('https://hubchicken.tk/weedc/cough.ogg');
+			const audio1 = new Audio('https://hubchicken.pages.dev/weedc/HAUGHHH.ogg');
+			const audio2 = new Audio('https://hubchicken.pages.dev/weedc/cough.ogg');
 			let startTime = Date.now();
 
 			animationInterval = setInterval(function() {
@@ -315,7 +315,7 @@
 					const changeText = document.getElementById("change");
 					const changeIcon = document.getElementById("hubchickenicon");
 					changeText.innerText = "Welcome to hell.";
-					changeIcon.src = "https://hubchicken.tk/HUBCHICKEN.png"
+					changeIcon.src = "https://hubchicken.pages.dev/HUBCHICKEN.png"
 				}
 
 				if (elapsedTime > 10000) {
@@ -461,7 +461,7 @@
 
 		(await (await fetch(`https://api.github.com/repos/Exruw/schizoimages/git/trees/main`)).json()).tree.forEach(v => {
 			if (v?.type !== "tree" && v?.path && tensions[v.path.split(".").pop()])
-				schizoimages.push(`https://schizos.hubchicken.tk/${encodeURIComponent(v.path)}`);
+				schizoimages.push(`https://schizoimages.pages.dev/${encodeURIComponent(v.path)}`);
 		});
 
 		function schizojump() {
@@ -481,7 +481,7 @@
 			"mp3": true,
 			"ogg": true
 		};
-		let audiofiles = await fetch(`https://cdn.hubchicken.tk/audio-array.json`)
+		let audiofiles = await fetch(`https://hubcdn.pages.dev//audio-array.json`)
 		audiofiles = await audiofiles.json()
 
 		for (const [file, url] of Object.entries(audiofiles)) audiolist.push(url)
