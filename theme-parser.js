@@ -211,7 +211,7 @@
         let t = {}
 
         currentThemes.forEach((theme) => {
-            t[theme] = "https://hubchicken.tk/themes/" + theme + ".theme"
+            t[theme] = "https://hubchicken.pages.dev/themes/" + theme + ".theme"
         })
 
         return t
@@ -327,7 +327,7 @@
         themeButtonContainer.style.position = "absolute"
 
         let themeButton = document.createElement("img")
-        themeButton.src = "https://hubchicken.tk/palette.svg"
+        themeButton.src = "https://hubchicken.pages.dev/palette.svg"
         themeButton.style.filter = "invert(90%)"
         themeButton.style.display = "inline-block"
         themeButton.style.width = "24px"
