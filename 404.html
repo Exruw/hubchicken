@@ -21,7 +21,7 @@
 			left: 0;
 			width: 100px;
 			height: 100px;
-			background-image: url('https://hubchicken.tk/HUBCHICKEN.png');
+			background-image: url('https://hubchicken.pages.dev/HUBCHICKEN.png');
 			background-size: contain;
 			opacity: 0.4;
 			transition: top 10s linear, left 10s linear;
@@ -69,7 +69,7 @@
 	<body>
 		<div class="topbar" id="topbar" >
 			<p>
-				Page Not Found<br /><a href="https://hubchicken.tk/">Go Back</a>
+				Page Not Found<br /><a href="https://hubchicken.pages.dev/">Go Back</a>
 			</p>
 		</div>
 		<script src="/theme-parser.js"></script>
@@ -130,7 +130,7 @@
         
 		const images = [];
 		const extensions = {"gif": true, "png": true, "jpg": true, "jpeg": true};
-		let files = await fetch(`https://cdn.hubchicken.tk/image-array.json`)
+		let files = await fetch(`https://hubcdn.pages.dev/image-array.json`)
 		files = await files.json()
 
 		for (const [file, url] of Object.entries(files)) images.push(url)
