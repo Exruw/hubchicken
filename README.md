@@ -41,4 +41,4 @@ shade (videos)
 
 September 18th, 2021
 
-![hubchick](https://hubchicken.tk/HUBCHICKEN.png)
+![hubchick](https://hubchicken.pages.dev/HUBCHICKEN.png)
