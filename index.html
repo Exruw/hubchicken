@@ -118,8 +118,10 @@
 		}
 
 		function loadVideo(url) {
-			videoSource.src = url;
-			videoSource.type = "video/quicktime";
+			video.innerHTML = `
+        <source src="${url}" type="video/ogg">
+        <source src="${url}" type="video/quicktime">
+    `;
 			video.autoplay = true;
 			video.load();
 		}
