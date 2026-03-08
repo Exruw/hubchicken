@@ -30,6 +30,7 @@ class Scroller {
         const video = document.createElement("video");
         video.controls = "false";
         video.playsInline = true;
+        video.autoplay = true;
         video.src = url;
         this.observer.observe(video);
         this.videoScroller.append(video);
