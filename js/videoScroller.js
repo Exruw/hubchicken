@@ -28,7 +28,7 @@ class Scroller {
 
     createVideo(url) {
         const video = document.createElement("video");
-        video.controls = false;
+        video.controls = true;
         video.playsInline = true;
         video.autoplay = true;
         video.loop = true;
@@ -74,6 +74,8 @@ class Scroller {
             const video = element.target;
 
             if (element.isIntersecting && !oneActive) {
+                oneActive = true;
+
                 // Scroll to video locked
                 video.scrollIntoView({
                     behavior: "smooth",
@@ -84,7 +86,6 @@ class Scroller {
                 video.currentTime = 0;
                 video.muted = !navigator.userActivation.hasBeenActive;
                 this.safePlay(video);
-                oneActive = true;
                 
                 // Listener for when video ends
                 if (this.videoListener) this.videoListener.disconnect();
