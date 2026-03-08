@@ -194,6 +194,7 @@ nav a img {
 
 #videoScroller {
     overflow: hidden scroll;
+    position: relative;
     height: 90vh;
     background-color: var(--accent-primary);
     border-radius: var(--frame-radius);
@@ -212,6 +213,40 @@ nav a img {
     border-radius: var(--frame-radius);
     margin-bottom: 40px;
 }
+
+
+.scroller-overlay {
+    background-color: var(--accent-primary);
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroller-overlay p {
+    margin: 0;
+    color: var(--text-color);
+    font-family: Fredoka;
+    font-weight: 500;
+    user-select: none;
+    max-width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#videoCounter {
+    background-color: var(--accent-secondary);
+    padding: 5px;
+    border-radius: var(--button-radius);
+    color: var(--text-color);
+    font-family: Fredoka;
+}
+
 
 /* Side Card */
 #homeContent .side-card {
@@ -339,10 +374,11 @@ nav a img {
    ============================================ */
 #videoModal {
     display: none;
-    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
     flex-direction: column;
     align-items: center;
-    margin: auto;
     z-index: 99;
     width: 100%;
     height: 100%;
@@ -358,14 +394,23 @@ nav a img {
     max-height: 400px;
 }
 
-#videoModal div {
+#videoModal > div {
     background-color: var(--accent-primary);
     padding: 5px;
     border-radius: var(--button-radius);
     width: 70%;
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+
+#videoModal .topbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid white;
 }
 
 #videoModal p {

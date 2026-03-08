@@ -41,7 +41,12 @@
             <main>
                 <!-- Home Content -->
                 <div id="homeContent" class="content hidden">
-                    <div id="videoScroller"></div>
+                    <div id="videoScroller">
+                        <div class="scroller-overlay">
+                            <p id="videoName">Test</p>
+                            <p id="videoCounter">#0</p>
+                        </div>
+                    </div>
                     <div>
                         <div class="side-card">
                             <h3>Stats</h3>
@@ -61,12 +66,14 @@
                 <div id="searchContent" class="content hidden">
                     <div id="videoModal">
                         <div>
-                            <p id="videoModalTitle">Title</p>
-                            <button id="close">X</button>
+                            <div class="topbar">
+                                <p id="videoModalTitle">Title</p>
+                                <button id="close">X</button>
+                            </div>
+                            <video id="videoModalDisplay" controls autoplay>
+                                <source>
+                            </video>
                         </div>
-                        <video id="videoModalDisplay" controls autoplay>
-                            <source>
-                        </video>
                     </div>
                     <input type="text" placeholder="" id="searchBar">
                     <div>

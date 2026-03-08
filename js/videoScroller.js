@@ -6,6 +6,8 @@ class Scroller {
         // DOM Elements
         this.videoScroller = document.getElementById("videoScroller");
         this.videosWatched = document.getElementById("videosWatched");
+        this.videoName = document.getElementById("videoName");
+        this.videoCounter = document.getElementById("videoCounter");
 
         // Scroll Function
         this.observer = new IntersectionObserver((elements) => this.observe(elements));
@@ -26,6 +28,18 @@ class Scroller {
         this.videoScroller.addEventListener("scroll", () => this.handleScroll());
     }
 
+    stripURL(url) {
+        const noUrlOrSeparators = url.replace(CONFIG.BASE_URL, "").replace(/[_-]/g, " ");
+        const parts = noUrlOrSeparators.split(".");
+        parts.pop(); // Remove file extension
+        return parts.join(" ");
+    }
+
+    updateOverlay(video) {
+        this.videoName.textContent = this.stripURL(video.src);
+        this.videoCounter.textContent = `#${this.watchedVideos.length}`;
+    }
+
     createVideo(url) {
         const video = document.createElement("video");
         video.controls = true;
@@ -35,6 +49,7 @@ class Scroller {
         video.preload = "auto";
         video.muted = true; // Mute to allow autoplay without user interaction
         video.src = url;
+        
         this.observer.observe(video);
         this.videoScroller.append(video);
     }
@@ -56,7 +71,6 @@ class Scroller {
     }
 
     handleScroll() {
-        
         const isAtBottom = Math.round(
             this.videoScroller.offsetHeight + this.videoScroller.scrollTop) 
             >= this.videoScroller.scrollHeight - 5; // -5 prevents calculation errors
@@ -86,10 +100,18 @@ class Scroller {
                 video.currentTime = 0;
                 video.muted = !navigator.userActivation.hasBeenActive;
                 this.safePlay(video);
+                this.addToWatched(video);
+                this.updateOverlay(video);
                 
                 // Listener for when video ends
-                if (this.videoListener) this.videoListener.disconnect();
-                this.videoListener = video.addEventListener("ended", () => this.addToWatched(video));
+                // if (this.videoListener) this.videoListener.disconnect();
+                // console.log("MOre");
+                // this.videoListener = video.addEventListener("ended", () => { 
+                //     console.log("Video ended event triggered");
+                //     this.addToWatched(video); 
+                // });
+
+                
             } else {
                 video.pause();
             }
