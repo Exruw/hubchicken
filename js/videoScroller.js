@@ -1,4 +1,4 @@
-import { getArray } from "https://hubchicken.pages.dev/video-array.js";
+import { getArray } from "./videoList.js";
 import { CONFIG } from "./config.js";
 
 class Scroller {    
@@ -28,20 +28,21 @@ class Scroller {
 
     createVideo(url) {
         const video = document.createElement("video");
-        video.controls = "false";
+        video.controls = false;
         video.playsInline = true;
         video.autoplay = true;
         video.src = url;
+        video.muted = true; // Mute to allow autoplay without user interaction
         this.observer.observe(video);
         this.videoScroller.append(video);
     }
 
     addToWatched(video) {
         if (!this.watchedVideos.includes(video.src)) {
-            const watchedVideos = parseInt(this.userData.get("watchedVideos") || 0);
+            const watchedVideosCount = parseInt(this.userData.get("watchedVideos") || 0);
+            this.videosWatched.textContent = watchedVideosCount + 1;
             this.watchedVideos.push(video.src);
-            this.userData.set("watchedVideos", watchedVideos + 1);
-            this.videosWatched.textContent = watchedVideos;
+            this.userData.set("watchedVideos", watchedVideosCount + 1);
         }
     }
 
@@ -78,17 +79,18 @@ class Scroller {
                 });
 
                 // Start watching video
+                video.currentTime = 0;
+                video.muted = !navigator.userActivation.hasBeenActive;
                 this.safePlay(video);
                 oneActive = true;
                 
                 // Listener for when video ends
                 if (this.videoListener) this.videoListener.disconnect();
-
                 this.videoListener = video.addEventListener("ended", () => {
                     this.addToWatched(video);
                     video.pause();
                     video.currentTime = 0;
-                    video.play();
+                    this.safePlay(video);
                 });
             } else {
                 video.pause();

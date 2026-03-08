@@ -10,7 +10,6 @@ class UserData {
     }
 
     save() {
-        console.log("Saving user data...");
         localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(this.data));
     }
 

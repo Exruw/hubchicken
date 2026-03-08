@@ -29,31 +29,21 @@ class TimeTracker {
     }
 
     updateTime() {
-        // Calculate elapsed time since last update
         const currentTime = Date.now();
-        const elapsedTime = currentTime - this.lastTime;
-        this.totalTime += elapsedTime;
 
-        // Update display and save data
-        this.timeDisplay.textContent = this.getFormattedTime();
-        this.userData.set("totalTime", this.totalTime);
+        if (document.hasFocus()) {
+            // Calculate elapsed time since last update
+            const elapsedTime = currentTime - this.lastTime;
+            this.totalTime += elapsedTime;
+
+            // Update display and save data
+            this.timeDisplay.textContent = this.getFormattedTime();
+            this.userData.set("totalTime", this.totalTime);
+        }
 
         // Update lastTime for the next interval
         this.lastTime = currentTime;
     }
-
-    /*
-function convertSeconds(seconds) {
-  const date = new Date(seconds * 1000);
-  const years = Math.floor(seconds / (365 * 24 * 60 * 60));
-  const days = date.getUTCDate() - 1;
-  const hours = date.getUTCHours();
-  const minutes = date.getUTCMinutes();
-  const remainingSeconds = date.getUTCSeconds();
-
-  return `${years} years, ${days} days, ${hours} hours, ${minutes} minutes and ${remainingSeconds} seconds`;
-}
-    */
 }
 
 export { TimeTracker };

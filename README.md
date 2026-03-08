@@ -14,13 +14,13 @@
 
 -------------------------------
 
+exruw (owner, coding)
+
+xander (UI redesign & coding for rewrite)
+
 mau (coding and some videos)
 
-xander (coding)
-
 mlgwarfare04 (coding)
-
-exruw (owner, coding)
 
 spacy (coding and videos)
 
@@ -42,3 +42,7 @@ shade (videos)
 September 18th, 2021
 
 ![hubchick](https://hubchicken.pages.dev/HUBCHICKEN.png)
+
+**Rewrite Creation Date:**
+
+March 8th, 2026

@@ -1,17 +1,22 @@
-/* Fonts */
+/* ============================================
+   FONTS & IMPORTS
+   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-/* Config */
+/* ============================================
+   CSS VARIABLES & CONFIG
+   ============================================ */
 :root {
     /* Colors */
     --accent-primary: #233044;
     --accent-secondary: #1a2332;
-    --background-color: radial-gradient(circle at 50% 50%, #1f2644 0%, #0d1220 70%, #000000 100%);;
+    --background-color: radial-gradient(circle at 50% 50%, #1f2644 0%, #0d1220 70%, #000000 100%);
     --text-color: white;
+    --text-muted: gray;
+    --dark-bg: #1b1b1b;
 
-    /* Logo Config */
-    --logo-text-gradient:  radial-gradient(circle at 50% 50%, #2563eb 30%, #f97316 100%);;
-    --logo-secondary-color: gray;
+    /* Gradients */
+    --logo-text-gradient: radial-gradient(circle at 50% 50%, #2563eb 30%, #f97316 100%);
 
     /* Border Radius */
     --frame-radius: 10px;
@@ -20,74 +25,79 @@
     /* Shadows */
     --primary-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 
-    /* Responsive Design Things */
+    /* Sizing */
     --button-image-size: 25px;
-    --white-image-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(49deg) brightness(103%) contrast(103%);
     --contact-image-size: 35px;
     --logo-size: 50px;
     --nav-width: 15%;
+
+    /* Filters */
+    --white-image-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(49deg) brightness(103%) contrast(103%);
 }
 
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
 * {
     box-sizing: border-box;
 }
 
-/* Keyframes */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotateGradient {
-    from {
-        background-position: 200% 0%;
-    }
-
-    to {
-        background-position: 0% 0%;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: none;
-    }
-}
-
-/* Body */
 body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
 }
 
-/* Layout */
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateGradient {
+    from { background-position: 200% 0%; }
+    to { background-position: 0% 0%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: none; }
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
 .layout {
     display: flex;
     width: 100vw;
     height: 100vh;
 }
 
-/* Logo */
+main {
+    background: var(--background-color);
+    flex: 1;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main > * {
+    animation: slideIn 0.8s forwards;
+}
+
+/* ============================================
+   LOGO & BRANDING
+   ============================================ */
 .logo-container {
     display: flex;
     align-items: center;
@@ -120,13 +130,15 @@ body {
 }
 
 .logo-container h2 span {
-    color: var(--logo-secondary-color);
+    color: var(--text-muted);
     font-style: italic;
     font-size: 14px;
     display: block;
 }
 
-/* Navigation Bar */
+/* ============================================
+   NAVIGATION
+   ============================================ */
 nav {
     background-color: var(--accent-primary);
     width: var(--nav-width);
@@ -144,7 +156,7 @@ nav {
 nav a {
     all: unset;
     background-color: var(--accent-primary);
-    font-family: "Fredoka";
+    font-family: Fredoka;
     color: var(--text-color);
     cursor: pointer;
     border-radius: var(--button-radius);
@@ -156,7 +168,8 @@ nav a {
     transition: background-color 0.3s;
 }
 
-nav a:hover, nav a.here {
+nav a:hover,
+nav a.here {
     background-color: var(--accent-secondary);
 }
 
@@ -167,32 +180,10 @@ nav a img {
     filter: var(--white-image-filter);
 }
 
-/* Main */
-main {
-    background: var(--background-color);
-    flex: 1;
-    height: 100vh;
-    width: auto;
-    position: relative; 
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-main > * {
-    animation: slideIn 0.8s forwards;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* Home */
-
+/* ============================================
+   HOME PAGE
+   ============================================ */
 #homeContent {
-
     display: grid;
     grid-template-columns: 0.5fr 0.3fr;
     grid-template-rows: 1fr auto;
@@ -207,13 +198,10 @@ main > * {
     background-color: var(--accent-primary);
     border-radius: var(--frame-radius);
     box-shadow: var(--primary-box-shadow);
-    
-    /* Hide scrollbar but keep scrolling */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
 }
 
-/* Chrome/Safari */
 #videoScroller::-webkit-scrollbar {
     display: none;
 }
@@ -225,6 +213,7 @@ main > * {
     margin-bottom: 40px;
 }
 
+/* Side Card */
 #homeContent .side-card {
     background-color: var(--accent-primary);
     padding: 10px;
@@ -234,6 +223,15 @@ main > * {
     font-family: Fredoka;
     user-select: none;
     box-shadow: var(--primary-box-shadow);
+}
+
+#homeContent .side-card h3 {
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
 }
 
 #homeContent .side-card .statistic {
@@ -252,15 +250,6 @@ main > * {
     font-weight: bold;
 }
 
-#homeContent .side-card h3 {
-    letter-spacing: 5px;
-    font-weight: 500;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom: 1px solid white;
-}
-
 #homeContent .side-card button {
     all: unset;
     display: inline-block;
@@ -270,11 +259,12 @@ main > * {
     padding: 10px;
     text-align: center;
     cursor: pointer;
-    background-color: #1b1b1b;
+    background-color: var(--dark-bg);
 }
 
-/* Video List */
-
+/* ============================================
+   SEARCH / VIDEO LIST
+   ============================================ */
 #searchContent {
     width: 90%;
     height: 90%;
@@ -285,8 +275,6 @@ main > * {
     overflow: hidden scroll;
     position: relative;
 }
-
-/* Scrollbar Styling */
 
 #searchContent::-webkit-scrollbar {
     width: 10px;
@@ -302,7 +290,7 @@ main > * {
 }
 
 #searchContent::-webkit-scrollbar-corner {
-  background: transparent;
+    background: transparent;
 }
 
 #searchContent input[type=text] {
@@ -310,7 +298,6 @@ main > * {
     top: 0;
     z-index: 2;
     width: 100%;
-    box-sizing: border-box !important;
     padding: 10px;
     color: var(--text-color);
     font-family: Fredoka;
@@ -319,6 +306,7 @@ main > * {
     border-radius: var(--button-radius) 5px 0 0;
     border-bottom: 1px solid white;
     outline: none;
+    font-size: 16px;
     transition: border 0.3s;
 }
 
@@ -346,6 +334,9 @@ main > * {
     background-color: transparent;
 }
 
+/* ============================================
+   VIDEO MODAL
+   ============================================ */
 #videoModal {
     display: none;
     position: absolute;
@@ -357,7 +348,6 @@ main > * {
     height: 100%;
     backdrop-filter: blur(4px);
     padding: 5px;
-    margin: 0;
     animation: fadeIn 0.5s forwards;
 }
 
@@ -408,6 +398,9 @@ main > * {
     background-color: var(--accent-secondary);
 }
 
+/* ============================================
+   LOADING & ERROR MODALS
+   ============================================ */
 .img-modal {
     position: absolute;
     display: none;
@@ -454,14 +447,15 @@ main > * {
     filter: grayscale();
 }
 
-/* Contacts */
+/* ============================================
+   CONTACTS PAGE
+   ============================================ */
 #contactsContent {
     width: 90%;
     height: 90%;
     display: flex;
     gap: 10px;
     flex-direction: column;
-    width: 90%;
     padding: 10px;
 }
 
@@ -471,12 +465,6 @@ main > * {
     background-color: var(--accent-primary);
     box-shadow: var(--primary-box-shadow);
     width: 100%;
-}
-
-.card h3 img {
-    width: var(--button-image-size);
-    height: var(--button-image-size);
-    filter: var(--white-image-filter)
 }
 
 .card h3 {
@@ -489,6 +477,12 @@ main > * {
     font-weight: 500;
     user-select: none;
     border-bottom: 1px solid white;
+}
+
+.card h3 img {
+    width: var(--button-image-size);
+    height: var(--button-image-size);
+    filter: var(--white-image-filter);
 }
 
 .split {
@@ -519,7 +513,7 @@ main > * {
     background-color: var(--accent-primary);
     border-radius: 50%;
     aspect-ratio: 1;
-    display: inline-block
+    display: inline-block;
 }
 
 .contact-card p {
@@ -532,39 +526,56 @@ main > * {
 }
 
 .contact-card span {
-    color: gray;
+    color: var(--text-muted);
     display: block;
 }
 
-/* Themes */
+/* ============================================
+   THEMES PAGE
+   ============================================ */
 #themesContent {
     width: 90%;
     height: 90%;
     display: flex;
     gap: 10px;
     flex-direction: column;
-    width: 90%;
     padding: 10px;
 }
 
-/* Responsive Design */
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.hidden {
+    display: none !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 @media screen and (max-width: 800px) {
     :root {
         --nav-width: 8%;
     }
 
-    /* Nav */
-
+    /* Navigation */
     .logo-container {
         justify-content: center;
+        align-items: center;
     }
 
-    .logo-container h2, nav a span {
+    .logo-container img {
+        margin: 0;
+    }
+
+    .logo-container h2,
+    nav a span {
         display: none;
     }
 
     nav {
         min-width: 45px;
+        align-items: center;
+        justify-content: center;
     }
 
     nav a {
