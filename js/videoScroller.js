@@ -31,8 +31,10 @@ class Scroller {
         video.controls = false;
         video.playsInline = true;
         video.autoplay = true;
-        video.src = url;
+        video.loop = true;
+        video.preload = "auto";
         video.muted = true; // Mute to allow autoplay without user interaction
+        video.src = url;
         this.observer.observe(video);
         this.videoScroller.append(video);
     }
@@ -86,12 +88,7 @@ class Scroller {
                 
                 // Listener for when video ends
                 if (this.videoListener) this.videoListener.disconnect();
-                this.videoListener = video.addEventListener("ended", () => {
-                    this.addToWatched(video);
-                    video.pause();
-                    video.currentTime = 0;
-                    this.safePlay(video);
-                });
+                this.videoListener = video.addEventListener("ended", () => this.addToWatched(video));
             } else {
                 video.pause();
             }

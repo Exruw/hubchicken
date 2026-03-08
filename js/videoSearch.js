@@ -144,7 +144,7 @@ class VideoSearchManager {
 
     search() {
         if (this.timeout) clearInterval(this.timeout);
-        const query = this.searchBar.value;
+        const query = this.searchBar.value.toLowerCase();
 
         this.clearVideos();
         this.showLoadingModal();
