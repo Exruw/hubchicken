@@ -13,11 +13,8 @@ class TimeTracker {
         const seconds = Math.floor(this.totalTime / 1000);
         const minutes = Math.floor(seconds / 60);
         const hours = Math.floor(minutes / 60);
-        const days = Math.floor(hours / 24);
-        const years = Math.floor(days / 365);
 
         // Get remainders
-        const remainingDays = days % 365;
         const remainingHours = hours % 24;
         const remainingMinutes = minutes % 60;
         const remainingSeconds = seconds % 60;
@@ -25,7 +22,7 @@ class TimeTracker {
         // Format with leading zeros
         const pad = (num) => String(num).padStart(2, '0');
 
-        return `${pad(years)}:${pad(remainingDays)}:${pad(remainingHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
+        return `${pad(remainingHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
     }
 
     updateTime() {

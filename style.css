@@ -194,6 +194,7 @@ nav a img {
 
 #videoScroller {
     overflow: hidden scroll;
+    scroll-snap-type: y mandatory;
     position: relative;
     height: 90vh;
     background-color: var(--accent-primary);
@@ -212,6 +213,8 @@ nav a img {
     height: 100%;
     border-radius: var(--frame-radius);
     margin-bottom: 40px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 
@@ -388,6 +391,7 @@ nav a img {
 }
 
 #videoModal video {
+    display: block;
     margin-top: 15px;
     max-width: 60%;
     min-width: 30%;
@@ -399,6 +403,7 @@ nav a img {
     padding: 5px;
     border-radius: var(--button-radius);
     width: 70%;
+    height: fit-content;
     display: flex;
     align-items: center;
     flex-direction: column;

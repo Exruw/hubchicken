@@ -91,10 +91,10 @@ class Scroller {
                 oneActive = true;
 
                 // Scroll to video locked
-                video.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
+                // video.scrollIntoView({
+                //     behavior: "smooth",
+                //     block: "center"
+                // });
 
                 // Start watching video
                 video.currentTime = 0;
